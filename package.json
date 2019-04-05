@@ -21,11 +21,18 @@
   },
   "homepage": "https://github.com/mahume/project-2#readme",
   "dependencies": {
+    "body-parser": "^1.18.3",
     "chart.js": "^2.8.0",
     "dotenv": "^7.0.0",
     "express": "^4.16.4",
     "express-handlebars": "^3.0.2",
     "mysql2": "^1.6.5",
     "sequelize": "^5.2.11"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "chai-http": "^4.2.1",
+    "cross-env": "^5.2.0",
+    "mocha": "^6.0.2"
   }
 }
