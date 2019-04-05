@@ -5,33 +5,33 @@ USE bullean_db;
 CREATE TABLE crypto
 (
     id INT NOT NULL AUTO_INCREMENT,
-    coinName VARCHAR(50) NOT NULL,
-    coinSymbol VARCHAR(10) NOT NULL,
-    purchDate DATE NOT NULL,
-    purchPrice INT NOT NULL,
-    purchQuantity INT NOT NULL,
+    coin_name VARCHAR(50) NOT NULL,
+    coin_symbol VARCHAR(10) NOT NULL,
+    purch_date DATE NOT NULL,
+    purch_price INT NOT NULL,
+    purch_quantity INT NOT NULL,
     PRIMARY KEY (id)
 );
 
 CREATE TABLE stocks
 (
     id INT NOT NULL AUTO_INCREMENT,
-    stockName VARCHAR(50) NOT NULL,
-    stockSymbol VARCHAR(10) NOT NULL,
-    purchDate DATE NOT NULL,
-    purchPrice INT NOT NULL,
-    purchQuantity INT NOT NULL,
+    stock_name VARCHAR(50) NOT NULL,
+    stock_symbol VARCHAR(10) NOT NULL,
+    purch_date DATE NOT NULL,
+    purch_price INT NOT NULL,
+    purch_quantity INT NOT NULL,
     PRIMARY KEY (id)
 );
 
 CREATE TABLE real_estate
 (
     id INT NOT NULL AUTO_INCREMENT,
-    propAddress VARCHAR(50) NOT NULL,
-    purchPrice INT NOT NULL,
-    purchDate DATE NOT NULL,
-    rented BOOLEAN NOT NULL DEFAULT false,,
-    monthRev INT NOT NULL,
+    prop_address VARCHAR(50) NOT NULL,
+    purch_price INT NOT NULL,
+    purch_date DATE NOT NULL,
+    rented BOOLEAN NOT NULL DEFAULT false,
+    month_rev INT NOT NULL,
     PRIMARY KEY (id)
 );
 

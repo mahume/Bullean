@@ -1,3 +1,8 @@
-INSERT INTO crypto (coinName, coinSymbol, purchDate, purchPrice, purchQuantity) VALUES ('Bitcoin', 'BTC', '1/13/2017', '$767.15', 10);
-INSERT INTO stocks (stockName, stockSymbol, purchDate, purchPrice, purchQuantity) VALUES ('Alphabet', 'GOOGL', '12/21/2018', '$991.25', 24);
-INSERT INTO real_estate (propAddress, purchPrice, purchDate, rented, monthRev) VALUES ('123 AndrewBlows Rd Denver', '$225,000', '12/21/2018', true, '$1600');
+INSERT INTO crypto (coin_name, coin_symbol, purch_date, purch_price, purch_quantity)
+VALUES ('Bitcoin', 'BTC', '2017-01-13', 767.15, 10);
+
+INSERT INTO stocks (stock_name, stock_symbol, purch_date, purch_price, purch_quantity)
+VALUES ('Alphabet', 'GOOGL', '2018-12-21', 991.25, 24);
+
+INSERT INTO real_estate (prop_address, purch_price, purch_date, rented, month_rev)
+VALUES ('123 AndrewBlows Rd Denver', 225000, '2018-12-21', true, 1600);
