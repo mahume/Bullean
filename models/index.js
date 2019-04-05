@@ -1,3 +1,4 @@
+require('dotenv').config();
 const fs = require('fs');
 const path = require('path');
 const Sequelize = require('sequelize');
@@ -16,7 +17,7 @@ if (config.use_env_variable) {
     config.username,
     config.password,
     config
-  );
+  );  
 }
 
 fs.readdirSync(__dirname)
