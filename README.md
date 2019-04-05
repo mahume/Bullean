@@ -6,5 +6,9 @@
 
 ## Built With
 
-## Authors slyker
+
+## Authors
+-   Mike Hume
+-   Andrew Clement 
+-   Anand "The Great" Davaadorj
 
