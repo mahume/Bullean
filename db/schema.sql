@@ -5,21 +5,33 @@ USE project_db;
 CREATE TABLE crypto
 (
     id INT NOT NULL AUTO_INCREMENT,
-    crypto_name VARCHAR(100) NOT NULL,
-    PRIMARY KEY (id)
-);
-
-CREATE TABLE real_estate
-(
-    id INT NOT NULL AUTO_INCREMENT,
-    property_name VARCHAR(100) NOT NULL,
+    coinName VARCHAR(50) NOT NULL,
+    coinSymbol VARCHAR(10) NOT NULL,
+    purchDate DATE NOT NULL,
+    purchPrice INT NOT NULL,
+    purchQuantity INT NOT NULL,
     PRIMARY KEY (id)
 );
 
 CREATE TABLE stocks
 (
     id INT NOT NULL AUTO_INCREMENT,
-    stock_name VARCHAR(100) NOT NULL,
+    stockName VARCHAR(50) NOT NULL,
+    stockSymbol VARCHAR(10) NOT NULL,
+    purchDate DATE NOT NULL,
+    purchPrice INT NOT NULL,
+    purchQuantity INT NOT NULL,
+    PRIMARY KEY (id)
+);
+
+CREATE TABLE real_estate
+(
+    id INT NOT NULL AUTO_INCREMENT,
+    propAddress VARCHAR(50) NOT NULL,
+    purchPrice INT NOT NULL,
+    purchDate DATE NOT NULL,
+    rented BOOLEAN NOT NULL DEFAULT false,,
+    monthRev INT NOT NULL,
     PRIMARY KEY (id)
 );
 
