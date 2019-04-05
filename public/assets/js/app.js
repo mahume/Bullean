@@ -24,7 +24,7 @@ const API = {
   },
   deleteExample(id) {
     return $.ajax({
-      url: `api/examples/${  id}`,
+      url: `api/examples/${id}`,
       type: 'DELETE',
     });
   },
