@@ -1,4 +1,5 @@
 require('dotenv').config();
+
 const express = require('express');
 const exphbs = require('express-handlebars');
 const bodyParser = require('body-parser');
@@ -9,7 +10,7 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 // Middleware
-app.use(express.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(express.static('public'));
 
