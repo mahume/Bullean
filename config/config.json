@@ -2,7 +2,7 @@
     "development": {
         "username": "root",
         "password": "process.env.DB_PASS",
-        "database": "bullean_db",
+        "database": "process.env.DB_DB",
         "host": "localhost",
         "dialect": "mysql"
     },
