@@ -1,5 +1,5 @@
 {
-  "name": "project-2",
+  "name": "bullean",
   "version": "1.0.0",
   "description": "## About",
   "main": "server.js",
@@ -21,7 +21,6 @@
   },
   "homepage": "https://github.com/mahume/project-2#readme",
   "dependencies": {
-    "body-parser": "^1.18.3",
     "chart.js": "^2.8.0",
     "dotenv": "^7.0.0",
     "express": "^4.16.4",
