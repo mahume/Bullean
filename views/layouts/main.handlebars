@@ -10,13 +10,55 @@
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
     integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-  <link rel="stylesheet" href="../../public/assets/css/style.css" media="screen" title="no title" charset="utf-8">
+  <link rel="stylesheet" href="assets/css/style.css" media="screen" title="no title" charset="utf-8">
   <title>Home Page</title>
 </head>
 
 <body>
-  {{{body}}}
-
+  <!-- Image and text -->
+  <nav class="navbar navbar-light bg-light shadow">
+    <a class="navbar-brand" href="#">
+      <img src="./images/bull-outline.png" width="50" height="50" class="d-inline-block align-top" alt="Bullean-icon">
+      Bullean
+    </a>
+    <ul class="nav nav-tabs">
+      <li class="nav-item">
+        <a class="nav-link active" href="#">
+          <i class="fab fa-bitcoin fa-2x"></i>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">
+          <i class="fas fa-sign fa-2x"></i>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">
+          <i class="fas fa-chart-line fa-2x"></i>
+        </a>
+      </li>
+    </ul>
+  </nav>
+  <!-- Main -->
+  <div class="container-fluid h-100">
+    <div class="row main-content h-100">
+      <div class="col-xl-1 d-none d-md-block"></div>
+      <div class="col-xl-10 col-12">
+        <div class="row h-100">
+          <div class="col-12 order-xl-1 order-1 my-4 bg-light h-50 shadow">
+            Line Chart
+          </div>
+          <div class="col-xl-4 order-xl-2 col-12 order-2 d-flex bg-light h-50 shadow">
+            Pie Chart
+          </div>
+          <div class="col-xl-7 order-xl-3 col-12 order-3 bg-light shadow">
+            Transactions
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-1 d-none d-md-block"></div>
+    </div>
+  </div>
 
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
@@ -27,7 +69,7 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
     crossorigin="anonymous"></script>
-  <script src="../../public/assets/js/app.js"></script>
+  <script src="assets/js/app.js"></script>
 </body>
 
 </html>
