@@ -1,5 +1,7 @@
 module.exports = function(sequelize, DataTypes) {
-    const Stocks = sequelize.define('Stocks', {
+  const Stocks = sequelize.define(
+    'Stocks',
+    {
       id: {
         type: DataTypes.INTEGER,
         allowNull: false,
@@ -26,6 +28,10 @@ module.exports = function(sequelize, DataTypes) {
         type: DataTypes.INTEGER,
         allowNull: false,
       },
-    });
-    return Stocks;
-  };
+    },
+    {
+      underscored: true,
+    }
+  );
+  return Stocks;
+};
