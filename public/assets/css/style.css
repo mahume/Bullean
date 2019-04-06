@@ -2,10 +2,18 @@ body, html {
   height: 100%;
   background-color: #B2B6C6;
 }
-
-.color-scheme {
-  color: #E18102;
-  color: #CF9551;
+.navbar {
+  background-color: #2CB355;
+}
+.navbar-brand {
+  font-family: 'Play', sans-serif;
+}
+.nav-link {
+  background-color: #E18102;
+}
+i {
   color: #D2A36A;
-  color: #2CB355;
+}
+.color-scheme {
+  color: #CF9551;
 }
