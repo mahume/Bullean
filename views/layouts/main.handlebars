@@ -4,45 +4,47 @@
 <head>
   <meta charset="utf-8">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css">
-  <!-- Bootstrap -->
+  {{!-- Bootstrap --}}
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <!-- Font Awesome -->
+  {{!-- Font Awesome --}}
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
     integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
   {{!-- Google Font --}}
-  <link href="https://fonts.googleapis.com/css?family=Play" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lora:400,700|Montserrat:300" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css" media="screen" title="no title" charset="utf-8">
   <title>Home Page</title>
 </head>
 
 <body>
-  <!-- Navbar -->
-  <nav class="navbar navbar-light shadow">
+  {{!-- Navbar --}}
+  <nav class="navbar navbar-light shadow d-flex justify-content-between sticky-top">
+    {{!-- Logo --}}
     <a class="navbar-brand" href="#">
       <img src="assets/images/bull-outline.png" width="50" height="50" class="d-inline-block align-top"
         alt="Bullean-icon">
-      Bullean
     </a>
-    <ul class="nav nav-tabs">
+    <h1 class="d-none d-sm-block d-md-inline display-5 text-light text-light">Bullean</h1>
+    {{!-- Nav Links --}}
+    <ul class="nav justify-content-end">
       <li class="nav-item">
-        <a class="nav-link active" href="#">
-          <i class="fab fa-bitcoin fa-2x text-light"></i>
+        <a class="nav-link" href="#">
+          <i class="fab fa-bitcoin fa-3x text-light"></i>
         </a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">
-          <i class="fas fa-sign fa-2x text-light"></i>
+          <i class="fas fa-sign fa-3x text-light"></i>
         </a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">
-          <i class="fas fa-chart-line fa-2x text-light"></i>
+          <i class="fas fa-chart-line fa-3x text-light"></i>
         </a>
       </li>
     </ul>
   </nav>
-  <!-- Main -->
+  {{!-- Main --}}
   <div class="container-fluid h-100">
     <div class="row main-content h-100">
       <div class="col-xl-1 d-none d-md-block"></div>

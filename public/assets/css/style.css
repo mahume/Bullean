@@ -5,16 +5,20 @@ body, html {
 .navbar {
   background-color: #80D199;
 }
-.navbar-brand {
-  font-family: 'Play', sans-serif;
+h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
 }
 .nav-link {
-  background-color: #E18102;
 }
-i {
-  color: #D2A36A;
+
+i:active {
+  color: #E18102;
 }
 .color-scheme {
+  color: #D2A36A;
+  color: #E18102;
   color: #2CB355;
   color: #A0A4B6;
   color: #CF954D;
