@@ -4,65 +4,75 @@
 <head>
   <meta charset="utf-8">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css">
-  <!-- Bootstrap -->
+  {{!-- Bootstrap --}}
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <!-- Font Awesome -->
+  {{!-- Font Awesome --}}
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
     integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
   {{!-- Google Font --}}
-  <link href="https://fonts.googleapis.com/css?family=Play" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lora:400,700|Montserrat:300" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css" media="screen" title="no title" charset="utf-8">
   <title>Home Page</title>
 </head>
 
 <body>
-  <!-- Navbar -->
-  <nav class="navbar navbar-light shadow">
+  {{!-- Navbar --}}
+  <nav class="navbar navbar-light shadow d-flex justify-content-between sticky-top">
+    {{!-- Logo --}}
     <a class="navbar-brand" href="#">
       <img src="assets/images/bull-outline.png" width="50" height="50" class="d-inline-block align-top"
         alt="Bullean-icon">
-      Bullean
     </a>
-    <ul class="nav nav-tabs">
+    <h1 class="d-none d-sm-block d-md-inline display-5 text-light text-light">Bullean</h1>
+    {{!-- Nav Links --}}
+    <ul class="nav justify-content-end">
       <li class="nav-item">
-        <a class="nav-link active" href="#">
-          <i class="fab fa-bitcoin fa-2x text-light"></i>
+        <a class="nav-link" href="#">
+          <i class="fab fa-bitcoin fa-3x text-light"></i>
         </a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">
-          <i class="fas fa-sign fa-2x text-light"></i>
+          <i class="fas fa-sign fa-3x text-light"></i>
         </a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">
-          <i class="fas fa-chart-line fa-2x text-light"></i>
+          <i class="fas fa-chart-line fa-3x text-light"></i>
         </a>
       </li>
     </ul>
   </nav>
-  <!-- Main -->
+  {{!-- Main --}}
   <div class="container-fluid h-100">
-    <div class="row main-content h-100">
-      <div class="col-xl-1 d-none d-md-block"></div>
-      <div class="col-xl-10 col-12">
+    <div class="row h-100">
+      <div class="d-none d-md-block col-lg-1 col-xl-1"></div>
+      <div class="col-12 col-lg-10 col-xl-10">
         <div class="row h-100">
-          <div class="col-12 order-xl-1 order-1 my-4 bg-light h-50 shadow">
-            Line Chart
+          <div class="col-12 order-1 order-xl-1 my-4 bg-light shadow">
+            <div id="line-chart-container">
+              <canvas id="lineChart"></canvas>
+            </div>
           </div>
-          <div class="col-xl-4 order-xl-2 col-12 order-2 d-flex bg-light h-50 shadow">
-            Pie Chart
+          <div class="col-12 col-xl-4 order-2 order-xl-2 d-flex bg-light shadow">
+            Doughnut
+            <div id="doughnut-chart-container">
+              <canvas id="doughnutChart"></canvas>
+            </div>
           </div>
-          <div class="col-xl-7 order-xl-3 col-12 order-3 bg-light shadow">
+          <div class="col-12 col-xl-7 order-3 order-xl-3 bg-light shadow">
             Transactions
           </div>
         </div>
       </div>
-      <div class="col-xl-1 d-none d-md-block"></div>
+      <div class="d-none d-md-block col-lg-1 col-xl-1"></div>
     </div>
   </div>
 
+  {{!-- Charts.js CDN --}}
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
+  {{!-- Bootstrap --}}
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
     crossorigin="anonymous"></script>
@@ -73,6 +83,9 @@
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
     crossorigin="anonymous"></script>
   <script src="assets/js/app.js"></script>
+  {{!-- Chart.js Files--}}
+  <script src="assets/js/lineChart.js"></script>
+  <script src="assets/js/doughnutChart.js"></script>
 </body>
 
 </html>

@@ -1,19 +1,35 @@
 body, html {
   height: 100%;
-  background-color: #B2B6C6;
+  background-color: #ECECF0;
 }
 .navbar {
-  background-color: #2CB355;
+  background-color: #80D199;
 }
-.navbar-brand {
-  font-family: 'Play', sans-serif;
+h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
 }
 .nav-link {
-  background-color: #E18102;
 }
-i {
-  color: #D2A36A;
+#line-chart-container {
+  position: relative;
+  height: 40vh;
+  width: 80vw;
+}
+#doughnut-chart-container {
+  position: relative;
+  height: 40vh;
+  width: 40vw;
+}
+i:active {
+  color: #E18102;
 }
 .color-scheme {
-  color: #CF9551;
+  color: #D2A36A;
+  color: #E18102;
+  color: #2CB355;
+  color: #A0A4B6;
+  color: #CF954D;
 }
+
