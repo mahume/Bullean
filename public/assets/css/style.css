@@ -1,9 +1,9 @@
 body, html {
   height: 100%;
-  background-color: #B2B6C6;
+  background-color: #E2E3E9;
 }
 .navbar {
-  background-color: #2CB355;
+  background-color: #80D199;
 }
 .navbar-brand {
   font-family: 'Play', sans-serif;
@@ -15,5 +15,7 @@ i {
   color: #D2A36A;
 }
 .color-scheme {
-  color: #CF9551;
+  color: #2CB355;
+  color: #A0A4B6;
+  color: #CF954D;
 }
