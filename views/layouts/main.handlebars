@@ -46,12 +46,12 @@
   </nav>
   {{!-- Main --}}
   <div class="container-fluid h-100">
-    <div class="row main-content h-100">
+    <div class="row h-100">
       <div class="col-xl-1 d-none d-md-block"></div>
       <div class="col-xl-10 col-12">
         <div class="row h-100">
           <div class="col-12 order-xl-1 order-1 my-4 bg-light h-50 shadow">
-            Line Chart
+            <canvas id="lineChart" width="400" height="400"></canvas>
           </div>
           <div class="col-xl-4 order-xl-2 col-12 order-2 d-flex bg-light h-50 shadow">
             Pie Chart
@@ -65,6 +65,9 @@
     </div>
   </div>
 
+  {{!-- Charts.js --}}
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
+  {{!-- Bootstrap --}}
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
     crossorigin="anonymous"></script>
@@ -75,6 +78,7 @@
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
     crossorigin="anonymous"></script>
   <script src="assets/js/app.js"></script>
+  <script src="assets/js/chart.js"></script>
 </body>
 
 </html>
