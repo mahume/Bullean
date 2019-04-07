@@ -51,10 +51,14 @@
       <div class="col-xl-10 col-12">
         <div class="row h-100">
           <div class="col-12 order-xl-1 order-1 my-4 bg-light h-50 shadow">
-            <canvas id="lineChart" width="400" height="400"></canvas>
+            <div id="line-chart-container">
+              <canvas id="lineChart"></canvas>
+            </div>
           </div>
           <div class="col-xl-4 order-xl-2 col-12 order-2 d-flex bg-light h-50 shadow">
-            Pie Chart
+            <div id="doughnut-chart-container">
+              <canvas id="doughnutChart"></canvas>
+            </div>
           </div>
           <div class="col-xl-7 order-xl-3 col-12 order-3 bg-light shadow">
             Transactions
@@ -65,7 +69,7 @@
     </div>
   </div>
 
-  {{!-- Charts.js --}}
+  {{!-- Charts.js CDN --}}
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
   {{!-- Bootstrap --}}
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
@@ -78,7 +82,9 @@
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
     crossorigin="anonymous"></script>
   <script src="assets/js/app.js"></script>
-  <script src="assets/js/chart.js"></script>
+  {{!-- Chart.js Files--}}
+  <script src="assets/js/lineChart.js"></script>
+  <script src="assets/js/doughnutChart.js"></script>
 </body>
 
 </html>

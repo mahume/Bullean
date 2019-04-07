@@ -12,7 +12,16 @@ h1 {
 }
 .nav-link {
 }
-
+#line-chart-container {
+  position: relative;
+  height: 40vh;
+  width: 80vw;
+}
+#doughnut-chart-container {
+  position: relative;
+  height: 40vh;
+  width: 40vw;
+}
 i:active {
   color: #E18102;
 }

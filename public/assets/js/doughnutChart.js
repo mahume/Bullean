@@ -1,9 +1,9 @@
-const ctx = $('#lineChart');
-const lineChart = new Chart(ctx, {
-  type: 'line',
+const ctx = $('#doughnutChart');
+const doughnutChart = new Chart(ctx, {
+  type: 'doughnut',
   data: {
     tables: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-    datasetes: [
+    datasets: [
       {
         label: '# of Votes',
         data: [12, 19, 3, 5, 2, 3],
