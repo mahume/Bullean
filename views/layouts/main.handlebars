@@ -89,39 +89,50 @@
           </div>
         </div>
         <div class="row">
+          {{!-- Doughnut Graph --}}
           <div class="col-12 col-lg-4 mb-4 bg-light shadow rounded">
             <div id="doughnut-chart-container">
               <canvas id="doughnutChart"></canvas>
             </div>
           </div>
+          {{!-- Activity Table --}}
           <div class="col-12 col-lg-8 bg-light shadow rounded">
+            <h3 class="text-center">Activity Log</h3>
             <table class="table table-striped">
               <thead>
                 <tr>
-                  <th scope="col">#</th>
-                  <th scope="col">First</th>
-                  <th scope="col">Last</th>
-                  <th scope="col">Handle</th>
+                  <th scope="col">Date</th>
+                  <th scope="col">Transaction</th>
+                  <th scope="col">Name</th>
+                  <th scope="col">Category</th>
+                  <th scope="col">Price</th>
+                  <th scope="col">Quantity</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <th scope="row">1</th>
-                  <td>Mark</td>
-                  <td>Otto</td>
-                  <td>@mdo</td>
+                  <th scope="row">03/02/2019</th>
+                  <td>Purchase</td>
+                  <td>Google</td>
+                  <td>Stock</td>
+                  <td>$10.00</td>
+                  <td>42</td>
                 </tr>
                 <tr>
-                  <th scope="row">2</th>
-                  <td>Jacob</td>
-                  <td>Thornton</td>
-                  <td>@fat</td>
+                  <th scope="row">02/20/2019</th>
+                  <td>Sale</td>
+                  <td>Bitcoin</td>
+                  <td>Crypto</td>
+                  <td>$22.50</td>
+                  <td>10</td>
                 </tr>
                 <tr>
-                  <th scope="row">3</th>
-                  <td>Larry</td>
-                  <td>the Bird</td>
-                  <td>@twitter</td>
+                  <th scope="row">01/01/2018</th>
+                  <td>Sale</td>
+                  <td>Condo</td>
+                  <td>Real Estate</td>
+                  <td>$68,000</td>
+                  <td>1</td>
                 </tr>
               </tbody>
             </table>
