@@ -1,5 +1,5 @@
-const ctx = $('#lineChart');
-const lineChart = new Chart(ctx, {
+const ctx1 = $('#lineChart');
+const lineChart = new Chart(ctx1, {
   type: 'line',
   data: {
     tables: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],

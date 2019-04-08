@@ -27,46 +27,68 @@
     <h1 class="d-none d-sm-block d-md-inline display-5 text-light text-light">Bullean</h1>
     {{!-- Nav Links --}}
     <ul class="nav justify-content-end">
-      <li class="nav-item">
-        <a class="nav-link" href="#">
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle caret-off" href="#" id="bitcoinDropdown" role="button" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
           <i class="fab fa-bitcoin fa-3x text-light"></i>
         </a>
+        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="bitcoinDropdown">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle caret-off" href="#" id="realEstateDropdown" role="button"
+          data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           <i class="fas fa-sign fa-3x text-light"></i>
         </a>
+        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="realEstateDropdown">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle caret-off" href="#" id="stocksDropdown" role="button" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
           <i class="fas fa-chart-line fa-3x text-light"></i>
         </a>
+        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="stocksDropdown">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
       </li>
     </ul>
   </nav>
   {{!-- Main --}}
   <div class="container-fluid h-100">
     <div class="row h-100">
-      <div class="d-none d-md-block col-lg-1 col-xl-1"></div>
+      <div class="d-none d-lg-block col-lg-1 col-xl-1"></div>
       <div class="col-12 col-lg-10 col-xl-10">
-        <div class="row h-100">
-          <div class="col-12 order-1 order-xl-1 my-4 bg-light shadow">
+        <div class="row">
+          <div class="col-12 my-4 bg-light shadow rounded">
             <div id="line-chart-container">
               <canvas id="lineChart"></canvas>
             </div>
           </div>
-          <div class="col-12 col-xl-4 order-2 order-xl-2 d-flex bg-light shadow">
-            Doughnut
+        </div>
+        <div class="row">
+          <div class="col-12 col-lg-4 mb-4 bg-light shadow rounded">
             <div id="doughnut-chart-container">
               <canvas id="doughnutChart"></canvas>
             </div>
           </div>
-          <div class="col-12 col-xl-7 order-3 order-xl-3 bg-light shadow">
+          <div class="col-12 col-lg-8 bg-light shadow rounded">
             Transactions
           </div>
         </div>
       </div>
-      <div class="d-none d-md-block col-lg-1 col-xl-1"></div>
+      <div class="d-none d-lg-block col-lg-1 col-xl-1"></div>
     </div>
   </div>
 
