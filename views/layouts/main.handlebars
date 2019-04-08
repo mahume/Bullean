@@ -20,53 +20,85 @@
   {{!-- Navbar --}}
   <nav class="navbar navbar-light shadow d-flex justify-content-between sticky-top">
     {{!-- Logo --}}
-    <a class="navbar-brand" href="#">
-      <img src="assets/images/bull-outline.png" width="50" height="50" class="d-inline-block align-top"
-        alt="Bullean-icon">
-    </a>
+    <ul class="nav justify-content-left">
+      <li class="nav-item dropdown">
+        <a class="navbar-brand nav-link dropdown-toggle caret-off" href="#" id="logoDropdown" role="button"
+          data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <img src="assets/images/bull-outline.png" width="50" height="50" class="d-inline-block align-top"
+            alt="Bullean-icon">
+        </a>
+        <div class="dropdown-menu" aria-labelledby="logoDropdown">
+          <a class="dropdown-item" href="#">Home</a>
+          <a class="dropdown-item" href="#">User Settings</a>
+          <a class="dropdown-item" href="#">Log Out</a>
+        </div>
+      </li>
+    </ul>
     <h1 class="d-none d-sm-block d-md-inline display-5 text-light text-light">Bullean</h1>
     {{!-- Nav Links --}}
     <ul class="nav justify-content-end">
-      <li class="nav-item">
-        <a class="nav-link" href="#">
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle caret-off" href="#" id="bitcoinDropdown" role="button" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
           <i class="fab fa-bitcoin fa-3x text-light"></i>
         </a>
+        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="bitcoinDropdown">
+          <a class="dropdown-item" href="#">Bitcoin Overview</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Add Bitcoin</a>
+          <a class="dropdown-item" href="#">Sell Bitcoin</a>
+        </div>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle caret-off" href="#" id="realEstateDropdown" role="button"
+          data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           <i class="fas fa-sign fa-3x text-light"></i>
         </a>
+        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="realEstateDropdown">
+          <a class="dropdown-item" href="#">Real Estate Overview</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Add Real Estate</a>
+          <a class="dropdown-item" href="#">Remove Real Estate</a>
+        </div>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle caret-off" href="#" id="stocksDropdown" role="button" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
           <i class="fas fa-chart-line fa-3x text-light"></i>
         </a>
+        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="stocksDropdown">
+          <a class="dropdown-item" href="#">Stocks Overview</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Add Stock</a>
+          <a class="dropdown-item" href="#">Remove Stock</a>
+        </div>
       </li>
     </ul>
   </nav>
   {{!-- Main --}}
   <div class="container-fluid h-100">
     <div class="row h-100">
-      <div class="d-none d-md-block col-lg-1 col-xl-1"></div>
+      <div class="d-none d-lg-block col-lg-1 col-xl-1"></div>
       <div class="col-12 col-lg-10 col-xl-10">
-        <div class="row h-100">
-          <div class="col-12 order-1 order-xl-1 my-4 bg-light shadow">
+        <div class="row">
+          <div class="col-12 my-4 bg-light shadow rounded">
             <div id="line-chart-container">
               <canvas id="lineChart"></canvas>
             </div>
           </div>
-          <div class="col-12 col-xl-4 order-2 order-xl-2 d-flex bg-light shadow">
-            Doughnut
+        </div>
+        <div class="row">
+          <div class="col-12 col-lg-4 mb-4 bg-light shadow rounded">
             <div id="doughnut-chart-container">
               <canvas id="doughnutChart"></canvas>
             </div>
           </div>
-          <div class="col-12 col-xl-7 order-3 order-xl-3 bg-light shadow">
+          <div class="col-12 col-lg-8 bg-light shadow rounded">
             Transactions
           </div>
         </div>
       </div>
-      <div class="d-none d-md-block col-lg-1 col-xl-1"></div>
+      <div class="d-none d-lg-block col-lg-1 col-xl-1"></div>
     </div>
   </div>
 
