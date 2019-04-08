@@ -20,10 +20,20 @@
   {{!-- Navbar --}}
   <nav class="navbar navbar-light shadow d-flex justify-content-between sticky-top">
     {{!-- Logo --}}
-    <a class="navbar-brand" href="#">
-      <img src="assets/images/bull-outline.png" width="50" height="50" class="d-inline-block align-top"
-        alt="Bullean-icon">
-    </a>
+    <ul class="nav justify-content-left">
+      <li class="nav-item dropdown">
+        <a class="navbar-brand nav-link dropdown-toggle caret-off" href="#" id="logoDropdown" role="button" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
+          <img src="assets/images/bull-outline.png" width="50" height="50" class="d-inline-block align-top"
+          alt="Bullean-icon">
+        </a>
+        <div class="dropdown-menu" aria-labelledby="logoDropdown">
+          <a class="dropdown-item" href="#">Home</a>
+          <a class="dropdown-item" href="#">User Settings</a>
+          <a class="dropdown-item" href="#">Log Out</a>
+        </div>
+      </li>
+    </ul>
     <h1 class="d-none d-sm-block d-md-inline display-5 text-light text-light">Bullean</h1>
     {{!-- Nav Links --}}
     <ul class="nav justify-content-end">
@@ -33,10 +43,10 @@
           <i class="fab fa-bitcoin fa-3x text-light"></i>
         </a>
         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="bitcoinDropdown">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
+          <a class="dropdown-item" href="#">Bitcoin Overview</a>
           <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Something else here</a>
+          <a class="dropdown-item" href="#">Add Bitcoin</a>
+          <a class="dropdown-item" href="#">Sell Bitcoin</a>
         </div>
       </li>
       <li class="nav-item dropdown">
@@ -45,10 +55,10 @@
           <i class="fas fa-sign fa-3x text-light"></i>
         </a>
         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="realEstateDropdown">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
+          <a class="dropdown-item" href="#">Real Estate Overview</a>
           <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Something else here</a>
+          <a class="dropdown-item" href="#">Add Real Estate</a>
+          <a class="dropdown-item" href="#">Remove Real Estate</a>
         </div>
       </li>
       <li class="nav-item dropdown">
@@ -57,10 +67,10 @@
           <i class="fas fa-chart-line fa-3x text-light"></i>
         </a>
         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="stocksDropdown">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
+          <a class="dropdown-item" href="#">Stocks Overview</a>
           <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Something else here</a>
+          <a class="dropdown-item" href="#">Add Stock</a>
+          <a class="dropdown-item" href="#">Remove Stock</a>
         </div>
       </li>
     </ul>
