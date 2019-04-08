@@ -6,8 +6,8 @@ const doughnutChart = new Chart(ctx2, {
     datasets: [
       {
         label: 'Investment types',
-        backgroundColor: ['#3e95cd', '#8e5ea2', '#3cba9f'],
-        data: [2478, 5267, 734, 784, 433],
+        backgroundColor: ['#E18102', '#796BCB', '#2CB355'],
+        data: [2478, 5267, 734],
       },
     ],
   },

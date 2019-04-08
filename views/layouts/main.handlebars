@@ -19,7 +19,7 @@
 <body>
   {{!-- Navbar --}}
   <nav class="navbar navbar-light shadow d-flex justify-content-between sticky-top">
-    {{!-- Logo --}}
+    {{!-- Nav Logo --}}
     <ul class="nav justify-content-left">
       <li class="nav-item dropdown">
         <a class="navbar-brand nav-link dropdown-toggle caret-off" href="#" id="logoDropdown" role="button"
@@ -34,6 +34,7 @@
         </div>
       </li>
     </ul>
+    {{!-- Nav Title --}}
     <h1 class="d-none d-sm-block d-md-inline display-5 text-light text-light">Bullean</h1>
     {{!-- Nav Links --}}
     <ul class="nav justify-content-end">
@@ -88,13 +89,53 @@
           </div>
         </div>
         <div class="row">
+          {{!-- Doughnut Graph --}}
           <div class="col-12 col-lg-4 mb-4 bg-light shadow rounded">
             <div id="doughnut-chart-container">
               <canvas id="doughnutChart"></canvas>
             </div>
           </div>
+          {{!-- Activity Table --}}
           <div class="col-12 col-lg-8 bg-light shadow rounded">
-            Transactions
+            <h3 class="text-center">Activity Log</h3>
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th scope="col">Date</th>
+                  <th scope="col">Transaction</th>
+                  <th scope="col">Name</th>
+                  <th scope="col">Category</th>
+                  <th scope="col">Price</th>
+                  <th scope="col">Quantity</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">03/02/2019</th>
+                  <td>Purchase</td>
+                  <td>Google</td>
+                  <td>Stock</td>
+                  <td>$10.00</td>
+                  <td>42</td>
+                </tr>
+                <tr>
+                  <th scope="row">02/20/2019</th>
+                  <td>Sale</td>
+                  <td>Bitcoin</td>
+                  <td>Crypto</td>
+                  <td>$22.50</td>
+                  <td>10</td>
+                </tr>
+                <tr>
+                  <th scope="row">01/01/2018</th>
+                  <td>Sale</td>
+                  <td>Condo</td>
+                  <td>Real Estate</td>
+                  <td>$68,000</td>
+                  <td>1</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </div>
       </div>
