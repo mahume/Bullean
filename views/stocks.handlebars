@@ -10,57 +10,56 @@
             </div>
           </div>
         </div>
-        <div class="row">
-          {{!-- Doughnut Graph --}}
-          <div class="col-12 col-lg-4 mb-4 bg-light shadow rounded">
-            <div id="doughnut-chart-container">
-              <canvas id="doughnutChart"></canvas>
-            </div>
-          </div>
-          {{!-- Activity Table --}}
-          <div class="col-12 col-lg-8 bg-light shadow rounded overflow-auto">
-            <h3 class="text-center">Activity Log</h3>
-            <table id="activityTable" class="table table-striped table-hover">
-              <thead>
-                <tr>
-                  <th scope="col">Date</th>
-                  <th scope="col">Transaction</th>
-                  <th scope="col">Name</th>
-                  <th scope="col">Category</th>
-                  <th scope="col">Price</th>
-                  <th scope="col">Quantity</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <th scope="row">03/02/2019</th>
-                  <td>Purchase</td>
-                  <td>Google</td>
-                  <td>Stock</td>
-                  <td>$10.00</td>
-                  <td>42</td>
-                </tr>
-                <tr>
-                  <th scope="row">02/20/2019</th>
-                  <td>Sale</td>
-                  <td>Bitcoin</td>
-                  <td>Crypto</td>
-                  <td>$22.50</td>
-                  <td>10</td>
-                </tr>
-                <tr>
-                  <th scope="row">01/01/2018</th>
-                  <td>Sale</td>
-                  <td>Condo</td>
-                  <td>Real Estate</td>
-                  <td>$68,000</td>
-                  <td>1</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
+      </div>
+      <div class="row">
+        {{!-- Purchase / Sell --}}
+        <div class="col-12 col-lg-4 mb-4 bg-light shadow rounded">
+          <div id="purchaseSellStocks"></div>
+        </div>
+        {{!-- Activity Table --}}
+        <div class="col-12 col-lg-8 bg-light shadow rounded overflow-auto">
+          <h3 class="text-center">Activity Log</h3>
+          <table id="activityTable" class="table table-striped table-hover">
+            <thead>
+              <tr>
+                <th scope="col">Date</th>
+                <th scope="col">Transaction</th>
+                <th scope="col">Name</th>
+                <th scope="col">Category</th>
+                <th scope="col">Price</th>
+                <th scope="col">Quantity</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">03/02/2019</th>
+                <td>Purchase</td>
+                <td>Google</td>
+                <td>Stock</td>
+                <td>$10.00</td>
+                <td>42</td>
+              </tr>
+              <tr>
+                <th scope="row">02/20/2019</th>
+                <td>Sale</td>
+                <td>Bitcoin</td>
+                <td>Crypto</td>
+                <td>$22.50</td>
+                <td>10</td>
+              </tr>
+              <tr>
+                <th scope="row">01/01/2018</th>
+                <td>Sale</td>
+                <td>Condo</td>
+                <td>Real Estate</td>
+                <td>$68,000</td>
+                <td>1</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </div>
-      <div class="d-none d-lg-block col-lg-1 col-xl-1"></div>
     </div>
+    <div class="d-none d-lg-block col-lg-1 col-xl-1"></div>
   </div>
+</div>
