@@ -1,8 +1,8 @@
-const ctx1 = $('#lineChart');
-const lineChart = new Chart(ctx1, {
-  type: 'line',
+const ctx1 = $('#barChart');
+const barChart = new Chart(ctx1, {
+  type: 'bar',
   data: {
-    tables: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+    lables: ['2015', '2016', '2017', '2018', '2019'],
     datasets: [
       {
         label: '# of Votes',
