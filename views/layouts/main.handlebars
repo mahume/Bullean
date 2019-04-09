@@ -28,7 +28,7 @@
             alt="Bullean-icon">
         </a>
         <div class="dropdown-menu" aria-labelledby="logoDropdown">
-          <a class="dropdown-item" href="#">Home</a>
+          <a class="dropdown-item" href="/">Home</a>
           <a class="dropdown-item" href="#">User Settings</a>
           <a class="dropdown-item" href="#">Log Out</a>
         </div>
@@ -44,10 +44,11 @@
           <i class="fab fa-bitcoin fa-3x text-light"></i>
         </a>
         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="bitcoinDropdown">
-          <a class="dropdown-item" href="#">Bitcoin Overview</a>
+          <a class="dropdown-item" href="/crypto">Crypto Overview</a>
           <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Add Bitcoin</a>
-          <a class="dropdown-item" href="#">Sell Bitcoin</a>
+          <a href="#" class="dropdown-item">Performance</a>
+          <a href="#" class="dropdown-item">Purchase / Sell</a>
+          <a href="#" class="dropdown-item">Crypto Activity</a>
         </div>
       </li>
       <li class="nav-item dropdown">
@@ -56,10 +57,11 @@
           <i class="fas fa-sign fa-3x text-light"></i>
         </a>
         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="realEstateDropdown">
-          <a class="dropdown-item" href="#">Real Estate Overview</a>
+          <a class="dropdown-item" href="/real-estate">Real Estate Overview</a>
           <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Add Real Estate</a>
-          <a class="dropdown-item" href="#">Remove Real Estate</a>
+          <a href="#" class="dropdown-item">Performance</a>
+          <a href="#" class="dropdown-item">Purchase / Sell</a>
+          <a href="#" class="dropdown-item">Real Estate Activity</a>
         </div>
       </li>
       <li class="nav-item dropdown">
@@ -68,80 +70,18 @@
           <i class="fas fa-chart-line fa-3x text-light"></i>
         </a>
         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="stocksDropdown">
-          <a class="dropdown-item" href="#">Stocks Overview</a>
+          <a class="dropdown-item" href="/stocks">Stocks Overview</a>
           <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Add Stock</a>
-          <a class="dropdown-item" href="#">Remove Stock</a>
+          <a href="#" class="dropdown-item">Performance</a>
+          <a href="#" class="dropdown-item">Purchase / Sell</a>
+          <a href="#" class="dropdown-item">Stocks Activity</a>
         </div>
       </li>
     </ul>
   </nav>
-  {{!-- Main --}}
-  <div class="container-fluid h-100">
-    <div class="row h-100">
-      <div class="d-none d-lg-block col-lg-1 col-xl-1"></div>
-      <div class="col-12 col-lg-10 col-xl-10">
-        <div class="row">
-          <div class="col-12 my-4 bg-light shadow rounded">
-            <div id="line-chart-container">
-              <canvas id="lineChart"></canvas>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          {{!-- Doughnut Graph --}}
-          <div class="col-12 col-lg-4 mb-4 bg-light shadow rounded">
-            <div id="doughnut-chart-container">
-              <canvas id="doughnutChart"></canvas>
-            </div>
-          </div>
-          {{!-- Activity Table --}}
-          <div class="col-12 col-lg-8 bg-light shadow rounded">
-            <h3 class="text-center">Activity Log</h3>
-            <table class="table table-striped">
-              <thead>
-                <tr>
-                  <th scope="col">Date</th>
-                  <th scope="col">Transaction</th>
-                  <th scope="col">Name</th>
-                  <th scope="col">Category</th>
-                  <th scope="col">Price</th>
-                  <th scope="col">Quantity</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <th scope="row">03/02/2019</th>
-                  <td>Purchase</td>
-                  <td>Google</td>
-                  <td>Stock</td>
-                  <td>$10.00</td>
-                  <td>42</td>
-                </tr>
-                <tr>
-                  <th scope="row">02/20/2019</th>
-                  <td>Sale</td>
-                  <td>Bitcoin</td>
-                  <td>Crypto</td>
-                  <td>$22.50</td>
-                  <td>10</td>
-                </tr>
-                <tr>
-                  <th scope="row">01/01/2018</th>
-                  <td>Sale</td>
-                  <td>Condo</td>
-                  <td>Real Estate</td>
-                  <td>$68,000</td>
-                  <td>1</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </div>
-      <div class="d-none d-lg-block col-lg-1 col-xl-1"></div>
-    </div>
-  </div>
+
+  {{{ body }}}
+
 
   {{!-- Charts.js CDN --}}
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
@@ -157,8 +97,7 @@
     crossorigin="anonymous"></script>
   <script src="assets/js/app.js"></script>
   {{!-- Chart.js Files--}}
-  <script src="assets/js/lineChart.js"></script>
-  <script src="assets/js/doughnutChart.js"></script>
+  <script src="assets/js/charts.js"></script>
 </body>
 
 </html>
