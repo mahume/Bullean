@@ -1,4 +1,9 @@
 const ctx2 = $('#doughnutChart');
+
+var db = require("../models");
+module.exports = function(app) {
+  
+}
 const doughnutChart = new Chart(ctx2, {
   type: 'doughnut',
   data: {
@@ -18,3 +23,4 @@ const doughnutChart = new Chart(ctx2, {
     },
   },
 });
+
