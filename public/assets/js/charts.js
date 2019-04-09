@@ -1,8 +1,13 @@
 const ctx1 = $('#barChart');
 const ctx2 = $('#doughnutChart');
-const ctx3 = $('#cryptoLineChart');
+const crypto = document.getElementById('cryptoLineChart');
 const ctx4 = $('#realEstateLineChart');
 const ctx5 = $('#stocksLineChart');
+
+const ctx3 = crypto.getContext('2d');
+const orangeGradient = ctx3.createLinearGradient(20, 0, 220, 0);
+orangeGradient.addColorStop(0, 'orange');
+orangeGradient.addColorStop(0, 'red');
 
 const barChart = new Chart(ctx1, {
   type: 'bar',
@@ -12,8 +17,8 @@ const barChart = new Chart(ctx1, {
       {
         label: 'Crypto',
         type: 'line',
-        borderColor: '#E18102',
         data: [5, 10, 15, 25, 12, 3],
+        borderColor: 'black',
         borderWidth: 1,
         fill: true,
       },
@@ -71,9 +76,13 @@ const cryptoLineChart = new Chart(ctx3, {
       {
         label: 'Crypto',
         type: 'line',
-        borderColor: '#E18102',
+        borderColor: orangeGradient,
+        pointBorderColor: orangeGradient,
+        pointBackgroundColor: orangeGradient,
+        pointHoverBackgroundColor: orangeGradient,
+        pointHoverBorderColor: orangeGradient,
         data: [5, 10, 15, 25, 12, 3],
-        borderWidth: 1,
+        borderWidth: 2,
         fill: true,
       },
     ],
