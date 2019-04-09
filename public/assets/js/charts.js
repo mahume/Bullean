@@ -1,5 +1,8 @@
 const ctx1 = $('#barChart');
 const ctx2 = $('#doughnutChart');
+const ctx3 = $('#cryptoLineChart');
+const ctx4 = $('#realEstateLineChart');
+const ctx5 = $('#stocksLineChart');
 
 const barChart = new Chart(ctx1, {
   type: 'bar',
@@ -58,4 +61,55 @@ const doughnutChart = new Chart(ctx2, {
     ],
   },
   options: {},
+});
+
+const cryptoLineChart = new Chart(ctx3, {
+  type: 'line',
+  data: {
+    labels: ['2015', '2016', '2017', '2018', '2019', '2020'],
+    datasets: [
+      {
+        label: 'Crypto',
+        type: 'line',
+        borderColor: '#E18102',
+        data: [5, 10, 15, 25, 12, 3],
+        borderWidth: 1,
+        fill: true,
+      },
+    ],
+  },
+});
+
+const realEstateLineChart = new Chart(ctx4, {
+  type: 'line',
+  data: {
+    labels: ['2015', '2016', '2017', '2018', '2019', '2020'],
+    datasets: [
+      {
+        label: 'Crypto',
+        type: 'line',
+        borderColor: '#E18102',
+        data: [5, 10, 15, 25, 12, 3],
+        borderWidth: 1,
+        fill: true,
+      },
+    ],
+  },
+});
+
+const stocksLineChart = new Chart(ctx5, {
+  type: 'line',
+  data: {
+    labels: ['2015', '2016', '2017', '2018', '2019', '2020'],
+    datasets: [
+      {
+        label: 'Crypto',
+        type: 'line',
+        borderColor: '#E18102',
+        data: [5, 10, 15, 25, 12, 3],
+        borderWidth: 1,
+        fill: true,
+      },
+    ],
+  },
 });
