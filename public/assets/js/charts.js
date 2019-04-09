@@ -6,8 +6,8 @@ const ctx5 = $('#stocksLineChart');
 
 const ctx3 = crypto.getContext('2d');
 const orangeGradient = ctx3.createLinearGradient(20, 0, 220, 0);
-orangeGradient.addColorStop(0, 'orange');
-orangeGradient.addColorStop(0, 'red');
+orangeGradient.addColorStop(0, 'rgba(128, 182, 244, 0.6)');
+orangeGradient.addColorStop(1, 'rgba(244, 144, 128, 0.6)');
 
 const barChart = new Chart(ctx1, {
   type: 'bar',
@@ -77,6 +77,7 @@ const cryptoLineChart = new Chart(ctx3, {
         label: 'Crypto',
         type: 'line',
         borderColor: orangeGradient,
+        backgroundColor: orangeGradient,
         pointBorderColor: orangeGradient,
         pointBackgroundColor: orangeGradient,
         pointHoverBackgroundColor: orangeGradient,
