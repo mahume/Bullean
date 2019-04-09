@@ -9,7 +9,34 @@ module.exports = app => {
         examples: dbExamples,
       });
     });
-  });
+  })
+
+  app.get('/crypto', (req, res) => {
+    db.Crypto.findAll({}).then(dbExamples => {
+      res.render('crypto', {
+        msg: 'Welcome!',
+        examples: dbExamples,
+      });
+    });
+  })
+
+  app.get('/stocks', (req, res) => {
+    db.Stocks.findAll({}).then(dbExamples => {
+      res.render('stocks', {
+        msg: 'Welcome!',
+        examples: dbExamples,
+      });
+    });
+  })
+
+  app.get('/real-estate', (req, res) => {
+    db.RealEstate.findAll({}).then(dbExamples => {
+      res.render('realestate', {
+        msg: 'Welcome!',
+        examples: dbExamples,
+      });
+    });
+  })
 
   // Load example page and pass in an example by id
   app.get('/example/:id', (req, res) => {
