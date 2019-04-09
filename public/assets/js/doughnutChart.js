@@ -11,10 +11,5 @@ const doughnutChart = new Chart(ctx2, {
       },
     ],
   },
-  options: {
-    title: {
-      display: true,
-      text: 'Porfolio Investments',
-    },
-  },
+  options: {},
 });
