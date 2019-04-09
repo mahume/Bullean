@@ -22,7 +22,7 @@ module.exports = app => {
 
   app.get('/real-estate', (req, res) => {
     db.RealEstate.findAll({}).then(dbExamples => {
-      res.render('realestate', {
+      res.render('real-estate', {
         msg: 'Welcome!',
         examples: dbExamples,
       });
