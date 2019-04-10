@@ -1,4 +1,4 @@
-module.exports = function(sequelize, DataTypes) {
+module.exports = (sequelize, DataTypes) => {
   const Crypto = sequelize.define('Crypto', {
     id: {
       type: DataTypes.INTEGER,
