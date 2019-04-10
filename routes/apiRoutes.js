@@ -5,7 +5,6 @@ module.exports = app => {
   app.get('/api/crypto', (req, res) => {
     db.Crypto.findAll({}).then(dbCrypto => {
       res.json(dbCrypto);
-      console.log(dbCrypto[0].dataValues.coin_name);
     });
   });
 
