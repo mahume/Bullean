@@ -1,5 +1,7 @@
 const crypto = document.getElementById('cryptoLineChart');
 
+const data = [50, 10, 15, 25, 12, 3];
+
 const ctxCrypto = crypto.getContext('2d');
 const orangeGradient = ctxCrypto.createLinearGradient(0, 0, 0, 970);
 orangeGradient.addColorStop(0, 'rgba(225, 128, 2, 0.6)');
@@ -19,7 +21,7 @@ const cryptoLineChart = new Chart(ctxCrypto, {
         pointBackgroundColor: orangeGradient,
         pointHoverBackgroundColor: orangeGradient,
         pointHoverBorderColor: orangeGradient,
-        data: [5, 10, 15, 25, 12, 3],
+        data,
         borderWidth: 2,
         fill: true,
       },
