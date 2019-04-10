@@ -2,8 +2,8 @@ const stocks = document.getElementById('stocksLineChart');
 
 const ctxStocks = stocks.getContext('2d');
 const greenGradient = ctxStocks.createLinearGradient(20, 0, 220, 0);
-greenGradient.addColorStop(0, 'rgba(128, 182, 244, 0.6)');
-greenGradient.addColorStop(1, 'rgba(244, 144, 128, 0.6)');
+greenGradient.addColorStop(0, 'rgba(2, 165, 225, 0.6)');
+greenGradient.addColorStop(1, 'rgba(2, 165, 225, 0.6)');
 
 const stocksLineChart = new Chart(ctxStocks, {
   type: 'line',
