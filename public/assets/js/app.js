@@ -11,7 +11,7 @@ const API = {
   },
   getExamples() {
     return $.ajax({
-      url: 'api/examples',
+      url: 'api/crypto',
       type: 'GET',
     });
   },

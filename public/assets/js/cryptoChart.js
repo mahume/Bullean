@@ -1,3 +1,7 @@
+const API = require('./app');
+
+API.getExamples();
+
 const crypto = document.getElementById('cryptoLineChart');
 
 const data = [50, 10, 15, 25, 12, 3];
