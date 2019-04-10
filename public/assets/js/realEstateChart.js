@@ -1,9 +1,9 @@
 const realEstate = document.getElementById('realEstateLineChart');
 
 const ctxRealEstate = realEstate.getContext('2d');
-const blueGradient = ctxRealEstate.createLinearGradient(20, 0, 220, 0);
-blueGradient.addColorStop(0, 'rgba(128, 182, 244, 0.6)');
-blueGradient.addColorStop(1, 'rgba(244, 144, 128, 0.6)');
+const blueGradient = ctxRealEstate.createLinearGradient(100, 0, 500, 0);
+blueGradient.addColorStop(0, 'rgba(225, 2, 84, 0.6)');
+blueGradient.addColorStop(1, 'rgba(225, 2, 84, 0.6)');
 
 const realEstateLineChart = new Chart(ctxRealEstate, {
   type: 'line',
