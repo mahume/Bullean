@@ -67,7 +67,7 @@ window.addEventListener('load', () => {
       ],
     },
     options: {
-      legend: { display: false },
+      legend: { display: true },
       responsive: true,
       maintainAspectRatio: true,
     },
