@@ -1,13 +1,11 @@
+const cryptoChart = document.getElementById('cryptoLineChart');
+
+const ctxCrypto = cryptoChart.getContext('2d');
+const cryptoGradient = ctxCrypto.createLinearGradient(0, 0, 0, 970);
+cryptoGradient.addColorStop(0, 'rgba(225, 128, 2, 0.6)');
+cryptoGradient.addColorStop(1, 'rgba(225, 184, 2, 0.6)');
+
 window.addEventListener('load', () => {
-  const crypto = document.getElementById('cryptoLineChart');
-
-  const data = [30, 10, 15, 50, 12, 3];
-
-  const ctxCrypto = crypto.getContext('2d');
-  const orangeGradient = ctxCrypto.createLinearGradient(0, 0, 0, 970);
-  orangeGradient.addColorStop(0, 'rgba(225, 128, 2, 0.6)');
-  orangeGradient.addColorStop(1, 'rgba(225, 184, 2, 0.6)');
-
   const cryptoLineChart = new Chart(ctxCrypto, {
     type: 'line',
     data: {
@@ -16,13 +14,13 @@ window.addEventListener('load', () => {
         {
           label: 'Crypto',
           type: 'line',
-          borderColor: orangeGradient,
-          backgroundColor: orangeGradient,
-          pointBorderColor: orangeGradient,
-          pointBackgroundColor: orangeGradient,
-          pointHoverBackgroundColor: orangeGradient,
-          pointHoverBorderColor: orangeGradient,
-          data,
+          borderColor: cryptoGradient,
+          backgroundColor: cryptoGradient,
+          pointBorderColor: cryptoGradient,
+          pointBackgroundColor: cryptoGradient,
+          pointHoverBackgroundColor: cryptoGradient,
+          pointHoverBorderColor: cryptoGradient,
+          data: [30, 10, 15, 50, 12, 3],
           borderWidth: 2,
           fill: true,
         },
