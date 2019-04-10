@@ -1,11 +1,11 @@
+const realEstateChart = document.getElementById('realEstateLineChart');
+
+const ctxRealEstate = realEstateChart.getContext('2d');
+const realEstateGradient = ctxRealEstate.createLinearGradient(0, 0, 0, 970);
+realEstateGradient.addColorStop(0, 'rgba(225, 2, 195, 0.6)');
+realEstateGradient.addColorStop(1, 'rgba(225, 2, 84, 0.6)');
+
 window.addEventListener('load', () => {
-  const realEstate = document.getElementById('realEstateLineChart');
-
-  const ctxRealEstate = realEstate.getContext('2d');
-  const blueGradient = ctxRealEstate.createLinearGradient(0, 0, 0, 970);
-  blueGradient.addColorStop(0, 'rgba(225, 2, 195, 0.6)');
-  blueGradient.addColorStop(1, 'rgba(225, 2, 84, 0.6)');
-
   const realEstateLineChart = new Chart(ctxRealEstate, {
     type: 'line',
     data: {
@@ -14,12 +14,12 @@ window.addEventListener('load', () => {
         {
           label: 'Real Estate',
           type: 'line',
-          borderColor: blueGradient,
-          backgroundColor: blueGradient,
-          pointBorderColor: blueGradient,
-          pointBackgroundColor: blueGradient,
-          pointHoverBackgroundColor: blueGradient,
-          pointHoverBorderColor: blueGradient,
+          borderColor: realEstateGradient,
+          backgroundColor: realEstateGradient,
+          pointBorderColor: realEstateGradient,
+          pointBackgroundColor: realEstateGradient,
+          pointHoverBackgroundColor: realEstateGradient,
+          pointHoverBorderColor: realEstateGradient,
           data: [5, 10, 15, 25, 12, 3],
           borderWidth: 2,
           fill: true,

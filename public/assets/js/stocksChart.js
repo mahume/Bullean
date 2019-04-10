@@ -1,11 +1,11 @@
+const stocksChart = document.getElementById('stocksLineChart');
+
+const ctxStocks = stocksChart.getContext('2d');
+const stocksGradient = ctxStocks.createLinearGradient(0, 0, 0, 970);
+stocksGradient.addColorStop(0, 'rgba(32, 2, 225, 0.6)');
+stocksGradient.addColorStop(1, 'rgba(2, 165, 225, 0.6)');
+
 window.addEventListener('load', () => {
-  const stocks = document.getElementById('stocksLineChart');
-
-  const ctxStocks = stocks.getContext('2d');
-  const greenGradient = ctxStocks.createLinearGradient(0, 0, 0, 970);
-  greenGradient.addColorStop(0, 'rgba(32, 2, 225, 0.6)');
-  greenGradient.addColorStop(1, 'rgba(2, 165, 225, 0.6)');
-
   const stocksLineChart = new Chart(ctxStocks, {
     type: 'line',
     data: {
@@ -14,12 +14,12 @@ window.addEventListener('load', () => {
         {
           label: 'Stocks',
           type: 'line',
-          borderColor: greenGradient,
-          backgroundColor: greenGradient,
-          pointBorderColor: greenGradient,
-          pointBackgroundColor: greenGradient,
-          pointHoverBackgroundColor: greenGradient,
-          pointHoverBorderColor: greenGradient,
+          borderColor: stocksGradient,
+          backgroundColor: stocksGradient,
+          pointBorderColor: stocksGradient,
+          pointBackgroundColor: stocksGradient,
+          pointHoverBackgroundColor: stocksGradient,
+          pointHoverBorderColor: stocksGradient,
           data: [5, 10, 15, 25, 12, 3],
           borderWidth: 2,
           fill: true,
