@@ -31,7 +31,7 @@ const cryptoAPI = {
   },
 };
 
-const submitCrypto = event => {
+const submitCrypto = () => {
   const cryptoTransaction = cryptoTransactionType[0].value;
   const cryptoData = {
     transaction_date: cryptoDate[0].value,

@@ -33,9 +33,7 @@ const realEstateAPI = {
   },
 };
 
-const submitRealEstate = event => {
-  event.preventDefault();
-
+const submitRealEstate = () => {
   const realEstateTransaction = realEstateTransactionType[0].value;
   const realEstateData = {
     transaction_date: realEstateDate[0].value,

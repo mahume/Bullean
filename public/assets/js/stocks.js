@@ -31,7 +31,7 @@ const stockAPI = {
   },
 };
 
-const submitStock = event => {
+const submitStock = () => {
   const stocksTransaction = stockTransactionType[0].value;
   const stockData = {
     transaction_date: stockDate[0].value,
