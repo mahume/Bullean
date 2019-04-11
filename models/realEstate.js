@@ -6,23 +6,31 @@ module.exports = function(sequelize, DataTypes) {
       autoIncrement: true,
       primaryKey: true,
     },
-    prop_address: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-    purch_date: {
+    transaction_date: {
       type: DataTypes.DATE,
       allowNull: false,
     },
-    purch_price: {
+    prop_address1: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    prop_address2: {
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
+    prop_city: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    prop_state: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    prop_zip: {
       type: DataTypes.INTEGER,
       allowNull: false,
     },
-    rented: {
-      type: DataTypes.BOOLEAN,
-      allowNull: false,
-    },
-    month_rev: {
+    prop_price: {
       type: DataTypes.INTEGER,
       allowNull: false,
     },

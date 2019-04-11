@@ -6,6 +6,10 @@ module.exports = function(sequelize, DataTypes) {
       autoIncrement: true,
       primaryKey: true,
     },
+    transaction_date: {
+      type: DataTypes.DATE,
+      allowNull: false,
+    },
     stock_name: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -14,15 +18,11 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    purch_date: {
-      type: DataTypes.DATE,
-      allowNull: false,
-    },
-    purch_price: {
+    stock_price: {
       type: DataTypes.INTEGER,
       allowNull: false,
     },
-    purch_quantity: {
+    stock_quantity: {
       type: DataTypes.INTEGER,
       allowNull: false,
     },

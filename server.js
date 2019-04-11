@@ -23,7 +23,9 @@ app.engine(
 app.set('view engine', 'handlebars');
 
 // Routes
-require('./routes/apiRoutes')(app);
+require('./routes/cryptoRoutes')(app);
+require('./routes/realEstateRoutes')(app);
+require('./routes/stocksRoutes')(app);
 require('./routes/htmlRoutes')(app);
 
 const syncOptions = { force: false };
