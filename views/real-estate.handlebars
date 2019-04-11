@@ -19,38 +19,39 @@
         <div class="col-12 mb-4">
           <div class="content bg-light shadow rounded p-3">
             <h3 class="text-center">Purchase / Sell</h3>
-            <div id="purchase-sale-container">
+            <div class="purchase-sale-container">
               <form>
                 <div class="form-row">
                   <div class="form-group col-md-6">
-                    <label for="transactionType">Transaction</label>
-                    <select class="form-control" id="transactionType">
+                    <label for="realEstateTransactionType">Transaction</label>
+                    <select class="form-control" id="realEstateTransactionType">
                       <option selected>Choose...</option>
                       <option>Purchase</option>
                       <option>Sale</option>
                     </select>
                   </div>
                   <div class="form-group col-md-6">
-                    <label for="date">Date</label>
-                    <input type="date" class="form-control" id="date">
+                    <label for="realEstateDate">Date</label>
+                    <input type="date" class="form-control" id="realEstateDate">
                   </div>
                 </div>
                 <div class="form-group">
-                  <label for="inputAddress">Address</label>
-                  <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+                  <label for="realEstateAddress1">Address</label>
+                  <input type="text" class="form-control" id="realEstateAddress1" placeholder="1234 Main St">
                 </div>
                 <div class="form-group">
-                  <label for="inputAddress2">Address 2</label>
-                  <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+                  <label for="realEstateAddress2">Address 2</label>
+                  <input type="text" class="form-control" id="realEstateAddress2"
+                    placeholder="Apartment, studio, or floor">
                 </div>
                 <div class="form-row">
                   <div class="form-group col-md-6">
-                    <label for="inputCity">City</label>
-                    <input type="text" class="form-control" id="inputCity" placeholder="Denver">
+                    <label for="realEstateCity">City</label>
+                    <input type="text" class="form-control" id="realEstateCity" placeholder="Denver">
                   </div>
                   <div class="form-group col-md-4">
-                    <label for="inputState">State</label>
-                    <select id="inputState" class="form-control">
+                    <label for="realEstateState">State</label>
+                    <select id="realEstateState" class="form-control">
                       <option selected>Choose...</option>
                       <option value="">N/A</option>
                       <option value="AK">Alaska</option>
@@ -108,15 +109,15 @@
                     </select>
                   </div>
                   <div class="form-group col-md-2">
-                    <label for="inputZip">Zip</label>
-                    <input type="text" class="form-control" id="inputZip">
+                    <label for="realEstateZip">Zip</label>
+                    <input type="text" class="form-control" id="realEstateZip">
                   </div>
                 </div>
                 <div class="form-group">
-                  <label for="price">Price</label>
-                  <input type="number" class="form-control" id="price" placeholder="$8.00">
+                  <label for="realEstatePrice">Price</label>
+                  <input type="number" class="form-control" id="realEstatePrice" placeholder="$8.00">
                 </div>
-                <button class="btn btn-primary btn-block" type="submit">Submit</button>
+                <button id="realEstateSubmitBtn" class="btn btn-primary btn-block" type="submit">Submit</button>
               </form>
             </div>
           </div>

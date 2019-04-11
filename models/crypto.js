@@ -6,6 +6,10 @@ module.exports = (sequelize, DataTypes) => {
       autoIncrement: true,
       primaryKey: true,
     },
+    transaction_date: {
+      type: DataTypes.DATE,
+      allowNull: false,
+    },
     coin_name: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -14,15 +18,11 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    purch_date: {
-      type: DataTypes.DATE,
-      allowNull: false,
-    },
-    purch_price: {
+    coin_price: {
       type: DataTypes.INTEGER,
       allowNull: false,
     },
-    purch_quantity: {
+    coin_quantity: {
       type: DataTypes.INTEGER,
       allowNull: false,
     },

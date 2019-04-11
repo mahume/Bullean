@@ -4,11 +4,10 @@ const cryptoName = $('#cryptoName');
 const cryptoSymbol = $('#cryptoSymbol');
 const cryptoPrice = $('#cryptoPrice');
 const cryptoQuantity = $('#cryptoQuantity');
-const cryptoSubmit = $('#cryptoSubmit');
+const cryptoSubmitBtn = $('#cryptoSubmitBtn');
 
-const API = {
-  getCrypto: () => {},
-  saveCrypto: crypto =>
+const cryptoAPI = {
+  save: crypto =>
     $.ajax({
       headers: {
         'Content-Type': 'application/json',
@@ -17,29 +16,31 @@ const API = {
       url: 'api/crypto',
       data: JSON.stringify(crypto),
     }),
-  deleteCrypto: () => {},
+  get: () =>
+    $.ajax({
+      url: 'api/crypto',
+      type: 'GET',
+    }),
+  delete: id => {
+    $.ajax({
+      url: `api/crypto/${id}`,
+      type: 'DELETE',
+    });
+  },
 };
 
-const handleFormSubmit = event => {
+const submitCrypto = event => {
   event.preventDefault();
 
-  const crypto = {
+  const cryptoData = {
+    transaction_date: cryptoDate,
     coin_name: cryptoName.val().trim(),
     coin_symbol: cryptoSymbol.val().trim(),
-    purch_date: date,
-    purch_price: price.val().trim(),
-    purch_quantity: quantity.val().trim(),
+    coin_price: cryptoPrice.val().trim(),
+    coin_quantity: cryptoQuantity.val().trim(),
   };
 
-  if (!(example.text && example.description)) {
-    alert('You must enter an example text and description!');
-    return;
-  }
-
-  API.saveExample(example).then(function() {
-    refreshExamples();
-  });
-
-  $exampleText.val('');
-  $exampleDescription.val('');
+  cryptoAPI.save(cryptoData).then(() => {});
 };
+
+$(cryptoSubmitBtn).on('submit', submitCrypto);
