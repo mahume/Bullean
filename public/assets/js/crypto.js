@@ -32,9 +32,7 @@ const cryptoAPI = {
 };
 
 const submitCrypto = event => {
-  event.preventDefault();
-
-  const transaction = cryptoTransactionType[0].value;
+  const cryptoTransaction = cryptoTransactionType[0].value;
   const cryptoData = {
     transaction_date: cryptoDate[0].value,
     coin_name: cryptoName.val().trim(),
@@ -43,13 +41,9 @@ const submitCrypto = event => {
     coin_quantity: parseInt(cryptoQuantity.val().trim()),
   };
 
-  console.log(cryptoData);
-
-  switch (transaction) {
+  switch (cryptoTransaction) {
     case 'purchase':
-      cryptoAPI.save(cryptoData).then(() => {
-        console.log('submitted');
-      });
+      cryptoAPI.save(cryptoData);
       break;
     case 'sale':
       break;
