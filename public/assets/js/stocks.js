@@ -24,7 +24,7 @@ const stockAPI = {
     });
   },
   delete(id) {
-    $.ajax({
+    return $.ajax({
       url: `api/stocks/${id}`,
       type: 'DELETE',
     });
@@ -52,4 +52,4 @@ const submitStock = () => {
   }
 };
 
-$(stockSubmitBtn).on('click', submitStock);
+stockSubmitBtn.on('click', submitStock);

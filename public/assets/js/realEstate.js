@@ -58,4 +58,4 @@ const submitRealEstate = () => {
   }
 };
 
-$(realEstateSubmitBtn).on('click', submitRealEstate);
+realEstateSubmitBtn.on('click', submitRealEstate);
