@@ -1,10 +1,10 @@
-const transactionType = document.getElementById('transactionType');
-const date = $('#date');
+const cryptoTransactionType = $('#cryptoTransactionType');
+const cryptoDate = $('#cryptoDate');
 const cryptoName = $('#cryptoName');
 const cryptoSymbol = $('#cryptoSymbol');
-const price = $('#price');
-const quantity = $('#quantity');
-const submit = $('#cryptoSubmit');
+const cryptoPrice = $('#cryptoPrice');
+const cryptoQuantity = $('#cryptoQuantity');
+const cryptoSubmit = $('#cryptoSubmit');
 
 const API = {
   getCrypto: () => {},

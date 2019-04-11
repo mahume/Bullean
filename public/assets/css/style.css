@@ -26,7 +26,7 @@ h1, h2, h3 {
 .purchase-sale-container {
   position: relative;
 }
-#bar-chart-container {
+.bar-chart-container {
   position: relative;
 }
 #doughnut-chart-container {
