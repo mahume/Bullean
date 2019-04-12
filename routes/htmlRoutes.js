@@ -2,16 +2,31 @@ const moment = require('moment');
 const db = require('../models');
 
 module.exports = app => {
-  // Load index page
+  // Index page
+  app.get('/', (req, res, next) => {
+    db.Crypto.findAll({}).then(dbPortfolio => {
+      res.render('index', {
+        data: dbPortfolio,
+      });
+    });
+  });
+  app.get('/', (req, res, next) => {
+    db.RealEstate.findAll({}).then(dbRealEstate => {
+      res.render('index', {
+        data: dbRealEstate,
+      });
+    });
+  });
   app.get('/', (req, res) => {
-    db.Crypto.findAll({}).then(dbExamples => {
-      res.render('index', {});
+    db.Stocks.findAll({}).then(dbStocks => {
+      res.render('index', {
+        data: dbStocks,
+      });
     });
   });
   // Crypto
   app.get('/crypto', (req, res) => {
     db.Crypto.findAll({}).then(dbCrypto => {
-      console.log(dbCrypto);
       res.render('crypto', {
         data: dbCrypto,
       });

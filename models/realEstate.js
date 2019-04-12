@@ -6,35 +6,39 @@ module.exports = (sequelize, DataTypes) => {
       autoIncrement: true,
       primaryKey: true,
     },
-    transaction_date: {
+    date: {
       type: DataTypes.DATE,
       allowNull: false,
     },
-    transaction_type: {
+    transaction: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    prop_address1: {
+    category: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    prop_address2: {
+    address1: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    address2: {
       type: DataTypes.STRING,
       allowNull: true,
     },
-    prop_city: {
+    city: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    prop_state: {
+    state: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    prop_zip: {
+    zip: {
       type: DataTypes.INTEGER,
       allowNull: false,
     },
-    prop_price: {
+    price: {
       type: DataTypes.INTEGER,
       allowNull: false,
     },

@@ -6,27 +6,31 @@ module.exports = (sequelize, DataTypes) => {
       autoIncrement: true,
       primaryKey: true,
     },
-    transaction_date: {
+    date: {
       type: DataTypes.DATE,
       allowNull: false,
     },
-    transaction_type: {
+    transaction: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    stock_name: {
+    category: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    stock_symbol: {
+    name: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    stock_price: {
+    symbol: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    price: {
       type: DataTypes.FLOAT(6, 2),
       allowNull: false,
     },
-    stock_quantity: {
+    quantity: {
       type: DataTypes.INTEGER,
       allowNull: false,
     },

@@ -117,7 +117,7 @@
                   <label for="realEstatePrice">Price</label>
                   <input type="number" class="form-control" id="realEstatePrice" placeholder="$8.00" required>
                 </div>
-                <button id="realEstateSubmitBtn" class="btn btn-primary btn-block" type="submit">Submit</button>
+                <button id="realEstateSubmitBtn" class="btn btn-block text-white" type="submit">Submit</button>
               </form>
             </div>
           </div>
@@ -143,13 +143,13 @@
               <tbody>
                 {{#each data}}
                 <tr>
-                  <th scope="row">{{ moment transaction_date format="MM/DD/YYYY" }}</th>
-                  <td>{{ transaction_type }}</td>
-                  <td>{{ prop_address1 }}</td>
-                  <td>{{ prop_city }}</td>
-                  <td>{{ prop_state }}</td>
-                  <td>{{ prop_zip }}</td>
-                  <td>${{ prop_price }}</td>
+                  <th scope="row">{{ formatDate date }}</th>
+                  <td>{{ transaction }}</td>
+                  <td>{{ address1 }}</td>
+                  <td>{{ city }}</td>
+                  <td>{{ state }}</td>
+                  <td>{{ zip }}</td>
+                  <td>{{ formatNumber price style="currency" currency="USD" }}</td>
                 </tr>
                 {{/each}}
               </tbody>
