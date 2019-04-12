@@ -6,7 +6,7 @@ const cryptoPrice = $('#cryptoPrice');
 const cryptoQuantity = $('#cryptoQuantity');
 const cryptoSubmitBtn = $('#cryptoSubmitBtn');
 
-const cryptoAPI = {
+const API = {
   save(crypto) {
     return $.ajax({
       headers: {
@@ -31,6 +31,14 @@ const cryptoAPI = {
   },
 };
 
+(function populateActivity() {
+  API.get().then(data => {
+    data.map(crypto => {
+      console.log(crypto);
+    });
+  });
+})();
+
 const submitCrypto = () => {
   const cryptoTransaction = cryptoTransactionType[0].value;
   const cryptoData = {
@@ -43,7 +51,7 @@ const submitCrypto = () => {
 
   switch (cryptoTransaction) {
     case 'purchase':
-      cryptoAPI.save(cryptoData);
+      API.save(cryptoData);
       break;
     case 'sale':
       break;

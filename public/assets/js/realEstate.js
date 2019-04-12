@@ -8,7 +8,7 @@ const realEstateZip = $('#realEstateZip');
 const realEstatePrice = $('#realEstatePrice');
 const realEstateSubmitBtn = $('#realEstateSubmitBtn');
 
-const realEstateAPI = {
+const API = {
   save(realEstate) {
     return $.ajax({
       headers: {
@@ -49,7 +49,7 @@ const submitRealEstate = () => {
 
   switch (realEstateTransaction) {
     case 'purchase':
-      realEstateAPI.save(realEstateData);
+      API.save(realEstateData);
       break;
     case 'sale':
       break;

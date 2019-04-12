@@ -6,7 +6,7 @@ const stockPrice = $('#stockPrice');
 const stockQuantity = $('#stockQuantity');
 const stockSubmitBtn = $('#stockSubmitBtn');
 
-const stockAPI = {
+const API = {
   save(stock) {
     return $.ajax({
       headers: {
@@ -43,7 +43,7 @@ const submitStock = () => {
 
   switch (stocksTransaction) {
     case 'purchase':
-      stockAPI.save(stockData);
+      API.save(stockData);
       break;
     case 'sale':
       break;
