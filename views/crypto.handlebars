@@ -78,14 +78,16 @@
                 </tr>
               </thead>
               <tbody>
+                {{#each data}}
                 <tr>
                   <th scope="row">{{ transaction_date }}</th>
-                  <td>{{ transaction_type }}</td>
+                  <td></td>
                   <td>{{ coin_name }}</td>
                   <td>{{ coin_symbol }}</td>
                   <td>{{ coin_price }}</td>
                   <td>{{ coin_quantity }}</td>
                 </tr>
+                {{/each}}
               </tbody>
             </table>
           </div>
@@ -108,44 +110,4 @@
 {{!-- JavaScript --}}
 <script src="assets/js/crypto.js"></script>
 {{!-- Chart.js --}}
-{{!-- <script src="assets/js/cryptoChart.js"></script> --}}
-
-<script>
-  $(document).ready(function () {
-    var encodedString = "{{chart_data}}";
-    var decodedString = JSON.parse(decodeURIComponent(encodedString));
-    console.log(decodedString)
-
-    const prices = decodedString.map(item => item.coin_price);
-    console.log({prices})
-
-    const cryptoChart = document.getElementById('cryptoLineChart');
-
-    const ctxCrypto = cryptoChart.getContext('2d');
-    const cryptoGradient = ctxCrypto.createLinearGradient(0, 0, 0, 970);
-    cryptoGradient.addColorStop(0, 'rgba(225, 128, 2, 0.6)');
-    cryptoGradient.addColorStop(1, 'rgba(225, 184, 2, 0.6)');
-
-    const cryptoLineChart = new Chart(ctxCrypto, {
-      type: 'line',
-      data: {
-        labels: ['2015', '2016', '2017', '2018', '2019', '2020'],
-        datasets: [
-          {
-            label: 'Crypto',
-            type: 'line',
-            borderColor: cryptoGradient,
-            backgroundColor: cryptoGradient,
-            pointBorderColor: cryptoGradient,
-            pointBackgroundColor: cryptoGradient,
-            pointHoverBackgroundColor: cryptoGradient,
-            pointHoverBorderColor: cryptoGradient,
-            data: prices,
-            borderWidth: 2,
-            fill: true,
-          },
-        ],
-      },
-    });
-  });
-</script>
+<script src="assets/js/cryptoChart.js"></script>
