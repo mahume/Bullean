@@ -80,11 +80,11 @@
               <tbody>
                 {{#each data}}
                 <tr>
-                  <th scope="row">{{ moment transaction_date format="MM/DD/YYYY" }}</th>
+                  <th scope="row">{{ formatDate transaction_date }}</th>
                   <td>{{ transaction_type }}</td>
                   <td>{{ stock_name }}</td>
                   <td>{{ stock_symbol }}</td>
-                  <td>${{ stock_price }}</td>
+                  <td>{{ formatNumber stock_price style="currency" currency="USD" }}</td>
                   <td>{{ stock_quantity }}</td>
                 </tr>
                 {{/each}}

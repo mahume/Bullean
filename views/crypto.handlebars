@@ -80,11 +80,11 @@
               <tbody>
                 {{#each data}}
                 <tr>
-                  <th scope="row">{{ moment transaction_date format="MM/DD/YYYY"}}</th>
+                  <th scope="row">{{ formatDate transaction_date }}</th>
                   <td>{{ transaction_type }}</td>
                   <td>{{ coin_name }}</td>
                   <td>{{ coin_symbol }}</td>
-                  <td>${{ coin_price }}</td>
+                  <td>{{ formatNumber coin_price style="currency" currency="USD" }}</td>
                   <td>{{ coin_quantity }}</td>
                 </tr>
                 {{/each}}
