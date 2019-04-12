@@ -141,15 +141,17 @@
                 </tr>
               </thead>
               <tbody>
+                {{#each data}}
                 <tr>
-                  <th scope="row">01/01/2018</th>
-                  <td>Sale</td>
-                  <td>123 Main St.</td>
-                  <td>Denver</td>
-                  <td>CO</td>
-                  <td>80206</td>
-                  <td>$68,000</td>
+                  <th scope="row">{{ moment transaction_date format="MM/DD/YYYY" }}</th>
+                  <td>{{ transaction_type }}</td>
+                  <td>{{ prop_address1 }}</td>
+                  <td>{{ prop_city }}</td>
+                  <td>{{ prop_state }}</td>
+                  <td>{{ prop_zip }}</td>
+                  <td>${{ prop_price }}</td>
                 </tr>
+                {{/each}}
               </tbody>
             </table>
           </div>

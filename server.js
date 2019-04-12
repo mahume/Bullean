@@ -3,6 +3,12 @@ require('dotenv').config();
 const express = require('express');
 const exphbs = require('express-handlebars');
 
+// Parsing MySQL date for Handlebars
+const Handlebars = require('handlebars');
+const MomentHandler = require('handlebars.moment');
+
+MomentHandler.registerHelpers(Handlebars);
+
 const db = require('./models');
 
 const app = express();

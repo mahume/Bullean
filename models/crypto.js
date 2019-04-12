@@ -23,7 +23,7 @@ module.exports = (sequelize, DataTypes) => {
       allowNull: false,
     },
     coin_price: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.FLOAT(6, 2),
       allowNull: false,
     },
     coin_quantity: {
