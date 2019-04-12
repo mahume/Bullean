@@ -1,23 +1,24 @@
-const dbCrypto = require('../models');
+const db = require('../models');
 
 module.exports = app => {
   // CREATE a new crypto
   app.post('/api/crypto', (req, res) => {
-    dbCrypto.Crypto.create(req.body).then(dbCrypto => {
+    db.Crypto.create(req.body).then(dbCrypto => {
       res.json(dbCrypto);
     });
   });
 
   // READ all cryptos
   app.get('/api/crypto', (req, res) => {
-    dbCrypto.Crypto.findAll({}).then(dbCrypto => {
+    db.Crypto.findAll({}).then(dbCrypto => {
       res.json(dbCrypto);
     });
   });
 
   // UPDATE a crypto by id
   app.put('/api/crypto/:id', (req, res) => {
-    dbCrypto.Crypto.update(
+    db.Crypto.update(
+      // Fix below
       {
         name: req.body.coin_name,
         symbol: req.body.coin_symbol,
@@ -37,7 +38,7 @@ module.exports = app => {
 
   // DELETE a crypto by id
   app.delete('/api/crypto/:id', (req, res) => {
-    dbCrypto.Crypto.destroy({
+    db.Crypto.destroy({
       where: {
         id: req.params.id,
       },

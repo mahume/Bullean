@@ -8,7 +8,7 @@ const realEstateZip = $('#realEstateZip');
 const realEstatePrice = $('#realEstatePrice');
 const realEstateSubmitBtn = $('#realEstateSubmitBtn');
 
-const realEstateAPI = {
+const API = {
   save(realEstate) {
     return $.ajax({
       headers: {
@@ -33,9 +33,7 @@ const realEstateAPI = {
   },
 };
 
-const submitRealEstate = event => {
-  event.preventDefault();
-
+const submitRealEstate = () => {
   const realEstateTransaction = realEstateTransactionType[0].value;
   const realEstateData = {
     transaction_date: realEstateDate[0].value,
@@ -51,7 +49,7 @@ const submitRealEstate = event => {
 
   switch (realEstateTransaction) {
     case 'purchase':
-      realEstateAPI.save(realEstateData);
+      API.save(realEstateData);
       break;
     case 'sale':
       break;
@@ -60,4 +58,4 @@ const submitRealEstate = event => {
   }
 };
 
-$(realEstateSubmitBtn).on('click', submitRealEstate);
+realEstateSubmitBtn.on('click', submitRealEstate);

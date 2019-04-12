@@ -1,23 +1,24 @@
-const dbRealEstate = require('../models');
+const db = require('../models');
 
 module.exports = app => {
   // CREATE a new realEstate
   app.post('/api/realestate', (req, res) => {
-    dbRealEstate.RealEstate.create(req.body).then(dbRealEstate => {
+    db.RealEstate.create(req.body).then(dbRealEstate => {
       res.json(dbRealEstate);
     });
   });
 
   // READ all realEstate
   app.get('/api/realestate', (req, res) => {
-    dbRealEstate.RealEstate.findAll({}).then(dbRealEstate => {
+    db.RealEstate.findAll({}).then(dbRealEstate => {
       res.json(dbRealEstate);
     });
   });
 
   // UPDATE a realEstate by id
   app.put('/api/realestate/:id', (req, res) => {
-    dbRealEstate.RealEstate.update(
+    db.RealEstate.update(
+      // Fix code below
       {
         address: req.body.prop_address,
         price: req.body.purch_price,
@@ -37,7 +38,7 @@ module.exports = app => {
 
   // DELETE a realEstate by id
   app.delete('/api/realestate/:id', (req, res) => {
-    dbRealEstate.RealEstate.destroy({
+    db.RealEstate.destroy({
       where: {
         id: req.params.id,
       },

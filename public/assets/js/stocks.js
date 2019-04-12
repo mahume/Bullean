@@ -6,7 +6,7 @@ const stockPrice = $('#stockPrice');
 const stockQuantity = $('#stockQuantity');
 const stockSubmitBtn = $('#stockSubmitBtn');
 
-const stockAPI = {
+const API = {
   save(stock) {
     return $.ajax({
       headers: {
@@ -24,14 +24,14 @@ const stockAPI = {
     });
   },
   delete(id) {
-    $.ajax({
+    return $.ajax({
       url: `api/stocks/${id}`,
       type: 'DELETE',
     });
   },
 };
 
-const submitStock = event => {
+const submitStock = () => {
   const stocksTransaction = stockTransactionType[0].value;
   const stockData = {
     transaction_date: stockDate[0].value,
@@ -43,7 +43,7 @@ const submitStock = event => {
 
   switch (stocksTransaction) {
     case 'purchase':
-      stockAPI.save(stockData);
+      API.save(stockData);
       break;
     case 'sale':
       break;
@@ -52,4 +52,4 @@ const submitStock = event => {
   }
 };
 
-$(stockSubmitBtn).on('click', submitStock);
+stockSubmitBtn.on('click', submitStock);

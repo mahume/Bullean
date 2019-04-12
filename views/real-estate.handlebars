@@ -24,20 +24,20 @@
                 <div class="form-row">
                   <div class="form-group col-md-6">
                     <label for="realEstateTransactionType">Transaction</label>
-                    <select class="form-control" id="realEstateTransactionType">
+                    <select class="form-control" id="realEstateTransactionType" required>
                       <option selected>Choose...</option>
-                      <option>Purchase</option>
-                      <option>Sale</option>
+                      <option value="purchase">Purchase</option>
+                      <option value="sale">Sale</option>
                     </select>
                   </div>
                   <div class="form-group col-md-6">
                     <label for="realEstateDate">Date</label>
-                    <input type="date" class="form-control" id="realEstateDate">
+                    <input type="date" class="form-control" id="realEstateDate" required>
                   </div>
                 </div>
                 <div class="form-group">
                   <label for="realEstateAddress1">Address</label>
-                  <input type="text" class="form-control" id="realEstateAddress1" placeholder="1234 Main St">
+                  <input type="text" class="form-control" id="realEstateAddress1" placeholder="1234 Main St" required>
                 </div>
                 <div class="form-group">
                   <label for="realEstateAddress2">Address 2</label>
@@ -47,11 +47,11 @@
                 <div class="form-row">
                   <div class="form-group col-md-6">
                     <label for="realEstateCity">City</label>
-                    <input type="text" class="form-control" id="realEstateCity" placeholder="Denver">
+                    <input type="text" class="form-control" id="realEstateCity" placeholder="Denver" required>
                   </div>
                   <div class="form-group col-md-4">
                     <label for="realEstateState">State</label>
-                    <select id="realEstateState" class="form-control">
+                    <select id="realEstateState" class="form-control" required>
                       <option selected>Choose...</option>
                       <option value="">N/A</option>
                       <option value="AK">Alaska</option>
@@ -110,12 +110,12 @@
                   </div>
                   <div class="form-group col-md-2">
                     <label for="realEstateZip">Zip</label>
-                    <input type="text" class="form-control" id="realEstateZip">
+                    <input type="text" class="form-control" id="realEstateZip" required>
                   </div>
                 </div>
                 <div class="form-group">
                   <label for="realEstatePrice">Price</label>
-                  <input type="number" class="form-control" id="realEstatePrice" placeholder="$8.00">
+                  <input type="number" class="form-control" id="realEstatePrice" placeholder="$8.00" required>
                 </div>
                 <button id="realEstateSubmitBtn" class="btn btn-primary btn-block" type="submit">Submit</button>
               </form>
@@ -160,8 +160,9 @@
 
 {{!-- Charts.js CDN --}}
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
-{{!-- Bootstrap --}}
+{{!-- jQuery --}}
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+{{!-- Bootstrap --}}
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
   integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"

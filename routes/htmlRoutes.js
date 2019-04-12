@@ -10,7 +10,7 @@ module.exports = app => {
       });
     });
   });
-
+  // Crypto
   app.get('/crypto', (req, res) => {
     db.Crypto.findAll({}).then(dbExamples => {
       res.render('crypto', {
@@ -19,7 +19,7 @@ module.exports = app => {
       });
     });
   });
-
+  // Real Estate
   app.get('/real-estate', (req, res) => {
     db.RealEstate.findAll({}).then(dbExamples => {
       res.render('real-estate', {
@@ -28,6 +28,7 @@ module.exports = app => {
       });
     });
   });
+  // Stocks
   app.get('/stocks', (req, res) => {
     db.Stocks.findAll({}).then(dbExamples => {
       res.render('stocks', {
@@ -36,16 +37,6 @@ module.exports = app => {
       });
     });
   });
-
-  // Load example page and pass in an example by id
-  app.get('/example/:id', (req, res) => {
-    db.Crypto.findOne({ where: { id: req.params.id } }).then(dbExample => {
-      res.render('example', {
-        example: dbExample,
-      });
-    });
-  });
-
   // Render 404 page for any unmatched routes
   app.get('*', (req, res) => {
     res.render('404');
