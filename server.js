@@ -5,7 +5,7 @@ const exphbs = require('express-handlebars');
 
 // Handlebar helpers
 const Handlebars = require('handlebars');
-// Parse Dates
+// Parse Dates & Currency
 const HandlebarsIntl = require('handlebars-intl');
 
 HandlebarsIntl.registerWith(Handlebars);

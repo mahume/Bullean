@@ -32,6 +32,15 @@ h1, h2, h3 {
 #doughnut-chart-container {
   position: relative;
 }
+#cryptoSubmitBtn {
+  background-color: rgb(234, 182, 101);
+}
+#realEstateSubmitBtn {
+  background-color: rgb(234, 101, 169);
+}
+#stockSubmitBtn {
+  background-color: rgb(114, 124, 235);
+}
 i:active {
   color: #E18102;
 }
