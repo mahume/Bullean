@@ -17,7 +17,10 @@ h1, h2, h3 {
 .navbar {
   background-color: #80D199;
 }
-.purchase-sale-container {
+.purchase-container {
+  position: relative;
+}
+.sell-container {
   position: relative;
 }
 .bar-chart-container {
@@ -31,13 +34,13 @@ h1, h2, h3 {
 #doughnut-chart-container {
   position: relative;
 }
-#cryptoSubmitBtn {
+.cryptoBtns {
   background-color: rgb(234, 182, 101);
 }
-#realEstateSubmitBtn {
+.realEstateBtns {
   background-color: rgb(234, 101, 169);
 }
-#stockSubmitBtn {
+.stocksBtns {
   background-color: rgb(114, 124, 235);
 }
 i:active {
