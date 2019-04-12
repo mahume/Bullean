@@ -10,6 +10,10 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.DATE,
       allowNull: false,
     },
+    transaction_type: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
     prop_address1: {
       type: DataTypes.STRING,
       allowNull: false,
