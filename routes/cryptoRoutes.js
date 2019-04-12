@@ -11,12 +11,12 @@ module.exports = app => {
   // READ all cryptos
   app.get('/api/crypto', (req, res) => {
     db.Crypto.findAll({
-      transaction_date: req.body.transaction_date,
-      transaction_type: req.body.transaction_type,
-      coin_name: req.body.coin_name,
-      coin_symbol: req.body.coin_symbol,
-      coin_price: req.body.coin_price,
-      coin_quantity: req.body.coin_quantity,
+      date: req.body.date,
+      transaction: req.body.transaction,
+      name: req.body.name,
+      symbol: req.body.symbol,
+      price: req.body.price,
+      quantity: req.body.quantity,
     }).then(dbCrypto => {
       res.json(dbCrypto);
     });

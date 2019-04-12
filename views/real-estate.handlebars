@@ -143,13 +143,13 @@
               <tbody>
                 {{#each data}}
                 <tr>
-                  <th scope="row">{{ formatDate transaction_date }}</th>
-                  <td>{{ transaction_type }}</td>
-                  <td>{{ prop_address1 }}</td>
-                  <td>{{ prop_city }}</td>
-                  <td>{{ prop_state }}</td>
-                  <td>{{ prop_zip }}</td>
-                  <td>{{ formatNumber prop_price style="currency" currency="USD" }}</td>
+                  <th scope="row">{{ formatDate date }}</th>
+                  <td>{{ transaction }}</td>
+                  <td>{{ address1 }}</td>
+                  <td>{{ city }}</td>
+                  <td>{{ state }}</td>
+                  <td>{{ zip }}</td>
+                  <td>{{ formatNumber price style="currency" currency="USD" }}</td>
                 </tr>
                 {{/each}}
               </tbody>

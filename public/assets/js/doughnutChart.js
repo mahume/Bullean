@@ -8,9 +8,9 @@ const doughnutChart = new Chart(ctxDoughnut, {
       {
         label: 'Investment types',
         backgroundColor: [
-          'rgb(225, 184, 2)',
-          'rgb(235, 100, 170)',
-          'rgb(111, 137, 235)',
+          'rgb(234, 182, 101)',
+          'rgb(234, 101, 169)',
+          'rgb(114, 124, 235)',
         ],
         data: [2478, 5267, 734],
       },
