@@ -16,6 +16,7 @@ const API = {
       url: 'api/crypto',
       data: JSON.stringify(crypto),
     });
+    // TODO: RELOAD PAGE
   },
   get() {
     return $.ajax({
@@ -35,6 +36,7 @@ const submitCrypto = () => {
   const cryptoTransaction = cryptoTransactionType[0].value;
   const cryptoData = {
     transaction_date: cryptoDate[0].value,
+    transaction_type: cryptoTransactionType.val().trim(),
     coin_name: cryptoName.val().trim(),
     coin_symbol: cryptoSymbol.val().trim(),
     coin_price: parseInt(cryptoPrice.val().trim()),
