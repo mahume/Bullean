@@ -1,3 +1,4 @@
+const moment = require('moment');
 const db = require('../models');
 
 module.exports = app => {
@@ -10,6 +11,7 @@ module.exports = app => {
   // Crypto
   app.get('/crypto', (req, res) => {
     db.Crypto.findAll({}).then(dbCrypto => {
+      console.log(dbCrypto);
       res.render('crypto', {
         data: dbCrypto,
       });
@@ -17,8 +19,10 @@ module.exports = app => {
   });
   // Real Estate
   app.get('/real-estate', (req, res) => {
-    db.RealEstate.findAll({}).then(dbExamples => {
-      res.render('real-estate', {});
+    db.RealEstate.findAll({}).then(dbRealEstate => {
+      res.render('real-estate', {
+        data: dbRealEstate,
+      });
     });
   });
   // Stocks

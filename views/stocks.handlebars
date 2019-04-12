@@ -78,14 +78,16 @@
                 </tr>
               </thead>
               <tbody>
+                {{#each data}}
                 <tr>
-                  <th scope="row">03/02/2019</th>
-                  <td>{{ data }}</td>
-                  <td>Google</td>
-                  <td>Symbol</td>
-                  <td>$10.00</td>
-                  <td>42</td>
+                  <th scope="row">{{ moment transaction_date format="MM/DD/YYYY" }}</th>
+                  <td>{{ transaction_type }}</td>
+                  <td>{{ stock_name }}</td>
+                  <td>{{ stock_symbol }}</td>
+                  <td>${{ stock_price }}</td>
+                  <td>{{ stock_quantity }}</td>
                 </tr>
+                {{/each}}
               </tbody>
             </table>
           </div>
