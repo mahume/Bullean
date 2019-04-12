@@ -15,47 +15,81 @@
         </div>
       </div>
       <div class="row">
-        {{!-- Purchase / Sell --}}
-        <div class="col-12 mb-4">
+        {{!-- Purchase  --}}
+        <div class="col-12 col-lg-6 mb-4">
           <div class="content bg-light shadow rounded p-3">
-            <h3 class="text-center">Purchase / Sell</h3>
-            <div class="purchase-sale-container">
+            <h3 class="text-center">Purchase</h3>
+            <div class="purchase-container">
               <form>
                 <div class="form-row">
                   <div class="form-group col-md-6">
-                    <label for="cryptoTransactionType">Transaction</label>
-                    <select class="form-control" id="cryptoTransactionType" required>
-                      <option selected>Choose...</option>
-                      <option value="purchase">Purchase</option>
-                      <option value="sale">Sale</option>
-                    </select>
+                    <label for="purchaseName">Crypto Name</label>
+                    <input type="text" class="form-control" id="purchaseName" placeholder="Bitcoin" required>
                   </div>
                   <div class="form-group col-md-6">
-                    <label for="cryptoDate">Date</label>
-                    <input type="date" class="form-control" id="cryptoDate" required>
+                    <label for="purchaseSymbol">Crypto Symbol</label>
+                    <input type="text" class="form-control" id="purchaseSymbol" placeholder="BTC" required>
                   </div>
                 </div>
                 <div class="form-row">
                   <div class="form-group col-md-6">
-                    <label for="cryptoName">Crypto Name</label>
-                    <input type="text" class="form-control" id="cryptoName" placeholder="Bitcoin" required>
+                    <label for="purchasePrice">Price</label>
+                    <input type="number" class="form-control" id="purchasePrice" placeholder="$8.00" required>
                   </div>
                   <div class="form-group col-md-6">
-                    <label for="cryptoSymbol">Crypto Symbol</label>
-                    <input type="text" class="form-control" id="cryptoSymbol" placeholder="BTC" required>
+                    <label for="purchaseQuantity">Quantity</label>
+                    <input type="number" class="form-control" id="purchaseQuantity" placeholder="40" required>
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-group col-md-12">
+                    <label for="purchaseDate">Date</label>
+                    <input type="date" class="form-control" id="purchaseDate" required>
+                  </div>
+                </div>
+                <button id="cryptoPurchaseBtn" class="btn btn-block text-white cryptoBtns"
+                  type="submit">Purchase</button>
+              </form>
+            </div>
+          </div>
+        </div>
+        {{!-- Sell --}}
+        <div class="col-12 col-lg-6 mb-4">
+          <div class="content bg-light shadow rounded p-3">
+            <h3 class="text-center">Sell</h3>
+            <div class="sell-container">
+              <form>
+                <div class="form-row">
+                  <div class="form-group col-md-6">
+                    <label for="sellName">Crypto Name</label>
+                    <input type="text" class="form-control" id="sellName" placeholder="Bitcoin" required>
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label for="sellSymbol">Crypto Symbol</label>
+                    <input type="text" class="form-control" id="sellSymbol" placeholder="BTC" required>
                   </div>
                 </div>
                 <div class="form-row">
                   <div class="form-group col-md-6">
-                    <label for="cryptoPrice">Price</label>
-                    <input type="number" class="form-control" id="cryptoPrice" placeholder="$8.00" required>
+                    <label for="sellPrice">Price</label>
+                    <input type="number" class="form-control" id="sellPrice" placeholder="$8.00" required>
                   </div>
                   <div class="form-group col-md-6">
-                    <label for="cryptoQuantity">Quantity</label>
-                    <input type="number" class="form-control" id="cryptoQuantity" placeholder="40" required>
+                    <label for="sellQuantity">Quantity</label>
+                    <input type="number" class="form-control" id="sellQuantity" placeholder="40" required>
                   </div>
                 </div>
-                <button id="cryptoSubmitBtn" class="btn btn-block text-white" type="submit">Submit</button>
+                <div class="form-row">
+                  <div class="form-group col-md-6">
+                    <label for="sellID">Crypto ID#</label>
+                    <input type="number" class="form-control" id="sellID" placeholder="1" required>
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label for="sellDate">Date</label>
+                    <input type="date" class="form-control" id="sellDate" required>
+                  </div>
+                </div>
+                <button id="cryptoSellBtn" class="btn btn-block text-white cryptoBtns" type="submit">Sell</button>
               </form>
             </div>
           </div>
@@ -75,6 +109,7 @@
                   <th scope="col">Symbol</th>
                   <th scope="col">Price</th>
                   <th scope="col">Quantity</th>
+                  <th scope="col">ID</th>
                 </tr>
               </thead>
               <tbody>
@@ -86,6 +121,7 @@
                   <td>{{ symbol }}</td>
                   <td>{{ formatNumber price style="currency" currency="USD" }}</td>
                   <td>{{ quantity }}</td>
+                  <td>{{ id }}</td>
                 </tr>
                 {{/each}}
               </tbody>
