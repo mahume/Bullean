@@ -31,14 +31,6 @@ const API = {
   },
 };
 
-(function populateActivity() {
-  API.get().then(data => {
-    data.map(crypto => {
-      console.log(crypto);
-    });
-  });
-})();
-
 const submitCrypto = () => {
   const cryptoTransaction = cryptoTransactionType[0].value;
   const cryptoData = {
