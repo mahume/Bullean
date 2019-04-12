@@ -12,10 +12,17 @@ module.exports = app => {
   });
   // Crypto
   app.get('/crypto', (req, res) => {
-    db.Crypto.findAll({}).then(dbExamples => {
+    db.Crypto.findAll({}).then(dbCrypto => {
+      const data = encodeURIComponent(JSON.stringify(dbCrypto));
+      console.log({ data });
       res.render('crypto', {
-        msg: 'Welcome!',
-        examples: dbExamples,
+        transaction_date: dbCrypto[0].dataValues.transaction_date,
+        transaction_type: dbCrypto[0].dataValues.transaction_type,
+        coin_name: dbCrypto[0].dataValues.coin_name,
+        coin_symbol: dbCrypto[0].dataValues.coin_symbol,
+        coin_price: dbCrypto[0].dataValues.coin_price,
+        coin_quantity: dbCrypto[0].dataValues.coin_quantity,
+        chart_data: data,
       });
     });
   });

@@ -10,6 +10,10 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.DATE,
       allowNull: false,
     },
+    transaction_type: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
     coin_name: {
       type: DataTypes.STRING,
       allowNull: false,
