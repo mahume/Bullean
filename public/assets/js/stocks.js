@@ -1,10 +1,17 @@
-const stockTransactionType = $('#stockTransactionType');
-const stockDate = $('#stockDate');
-const stockName = $('#stockName');
-const stockSymbol = $('#stockSymbol');
-const stockPrice = $('#stockPrice');
-const stockQuantity = $('#stockQuantity');
-const stockSubmitBtn = $('#stockSubmitBtn');
+const purchaseName = $('#purchaseName');
+const purchaseSymbol = $('#purchaseSymbol');
+const purchasePrice = $('#purchasePrice');
+const purchaseQuantity = $('#purchaseQuantity');
+const purchaseDate = $('#purchaseDate');
+const purchaseBtn = $('#purchaseBtn');
+
+const sellName = $('#sellName');
+const sellSymbol = $('#sellSymbol');
+const sellPrice = $('#sellPrice');
+const sellQuantity = $('#sellQuantity');
+const sellID = $('#sellID');
+const sellDate = $('#sellDate');
+const sellBtn = $('#sellBtn');
 
 const API = {
   save(stock) {
@@ -31,25 +38,36 @@ const API = {
   },
 };
 
-const submitStock = () => {
-  const stocksTransaction = stockTransactionType[0].value;
-  const stockData = {
-    transaction_date: stockDate[0].value,
-    stock_name: stockName.val().trim(),
-    stock_symbol: stockSymbol.val().trim(),
-    stock_price: parseInt(stockPrice.val().trim()),
-    stock_quantity: parseInt(stockQuantity.val().trim()),
+const purchaseStock = () => {
+  const purchaseData = {
+    date: purchaseDate[0].value,
+    transaction: 'Purchase',
+    category: 'Stock',
+    name: purchaseName.val().trim(),
+    symbol: purchaseSymbol.val().trim(),
+    price: parseInt(purchasePrice.val().trim()),
+    quantity: parseInt(purchaseQuantity.val().trim()),
   };
 
-  switch (stocksTransaction) {
-    case 'purchase':
-      API.save(stockData);
-      break;
-    case 'sale':
-      break;
-    default:
-      break;
-  }
+  API.save(purchaseData);
+  window.location.reload();
 };
 
-stockSubmitBtn.on('click', submitStock);
+const sellStock = () => {
+  const sellData = {
+    id: parseInt(sellID.val().trim()),
+    date: sellDate[0].value,
+    transaction: 'Sale',
+    category: 'Stock',
+    name: sellName.val().trim(),
+    symbol: sellSymbol.val().trim(),
+    price: parseInt(sellPrice.val().trim()),
+    quantity: parseInt(sellQuantity.val().trim()),
+  };
+
+  API.delete(sellData.id);
+  window.location.reload();
+};
+
+purchaseBtn.on('click', purchaseStock);
+sellBtn.on('click', sellStock);

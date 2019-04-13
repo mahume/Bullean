@@ -19,7 +19,7 @@ const stocksLineChart = new Chart(ctxStocks, {
         pointBackgroundColor: stocksGradient,
         pointHoverBackgroundColor: stocksGradient,
         pointHoverBorderColor: stocksGradient,
-        data: [5, 10, 15, 25, 12, 3],
+        data: [5, 25, 15, 10, 12, 3],
         borderWidth: 2,
         fill: true,
       },

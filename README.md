@@ -1,62 +1,44 @@
 # Bullean
 
 ## About
-Full-stack app with the focus of consolidating your investment portfolio into an intuitive data-forward interface.
-
-## Getting Started
+Full-stack app that consolidates your investment portfolio into sleek and intuitive interface.
 
 See the app in action over at [Heroku](https://pure-earth-83150.herokuapp.com/).
 
-![](public/assets/images/homepage-desktop.png)
+## Features
 
-Keep track of the following assets of your portfolio:
--   [Crypto](#crypto):
--   [Real Estate](#real-estate):
--   [Stocks](#stocks):
+- [Portfolio Page](#portfolio)
+  - Brings all of your investments to a single, easy to read page. 
+  - **Portfolio Performance**: Contrasts Crypto, Real Estate, and Stock performances to help visualize which assets are performing the best.
+  - **Asset Allocation**: Graphical representation of your portfolio's asset distribution.
+  - **Activity Log**: Displays transaction history for all assets.
 
-___
-### <a name="crypto"></a> Crypto
+- [Crypto / Real Estate / Stocks](#assets)
+  - Each asset page displays:
+    - **Line chart**: Visualize the valuation of your asset over time.
+    - **Purchase field**: Add recently purchased items.
+    - **Sell field**: Remove items that you've sold.
+    - **Activity Log**: Displays transaction history for that assets.
 
-![](public/assets/images/stocks.png)
-
-
-#### Purchase / Sell
-![](public/assets/images/stocks.png)
-
-1.  Fill in the required fields
-2.  Submit
-3.  Your purchase / sale will be added to the database
-4.  The graph will reflect your current assets.
-
-
+- [Fully Responsive](#responsive) display for an enjoyable experience on a mobile, tablet, or desktop.
 
 ___
-### <a name="real-estate"></a> Real Estate
-
-![](public/assets/images/stocks.png)
-
-#### Purchase / Sell
-![](public/assets/images/stocks.png)
-
-1.  Fill in the required fields
-2.  Submit
-3.  Your purchase / sale will be added to the database
-4.  The graph will reflect your current assets.
+### <a name="portfolio"></a> Portfolio Page
+*Desktop view*
+![](public/assets/images/portfolio-desktop.png)
 
 ___
-### <a name="stocks"></a> Stocks
-
-![](public/assets/images/stocks.png)
-
-#### Purchase / Sell
-![](public/assets/images/stocks.png)
-
-1.  Fill in the required fields
-2.  Submit
-3.  Your purchase / sale will be added to the database
-4.  The graph will reflect your current assets.
+### <a name="assets"></a> Crypto / Real Estate / Stocks
+*Tablet view*
+![](public/assets/images/stocks-tablet.png)
 
 ___
+### <a name="responsive"></a> Responsive Display
+*Mobile view*  
+![](public/assets/images/portfolio-mobile.png)
+
+___
+
 ## Built With
 * Node.js
 * Express
