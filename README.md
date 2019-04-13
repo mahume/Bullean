@@ -3,7 +3,7 @@
 ## About
 Full-stack app that consolidates your investment portfolio into sleek and intuitive interface.
 
-See the app in action over at [Heroku](https://pure-earth-83150.herokuapp.com/).
+See the app in action over at [Heroku](https://immense-wave-20534.herokuapp.com/).
 
 ## Features
 
