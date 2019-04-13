@@ -27,7 +27,7 @@ const portfolioLineChart = new Chart(ctxPortfolio, {
       {
         label: 'Crypto',
         type: 'line',
-        data: [5, 10, 15, 25, 12, 3],
+        data: [10, 60, 15, 15, 25, 3],
         borderColor: 'white',
         backgroundColor: cryptoPortfolioGradient,
         pointBorderColor: cryptoPortfolioGradient,
@@ -59,7 +59,7 @@ const portfolioLineChart = new Chart(ctxPortfolio, {
         pointBackgroundColor: stocksPortfolioGradient,
         pointHoverBackgroundColor: stocksPortfolioGradient,
         pointHoverBorderColor: stocksPortfolioGradient,
-        data: [90, 10, 30, 40, 50, 10],
+        data: [90, 10, 30, 40, 60, 10],
         borderWidth: 2,
         fill: true,
       },
