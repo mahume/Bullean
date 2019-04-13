@@ -34,7 +34,7 @@
                 <div class="form-row">
                   <div class="form-group col-md-6">
                     <label for="purchasePrice">Price</label>
-                    <input type="number" class="form-control" id="purchasePrice" placeholder="$8.00" required>
+                    <input type="number" class="form-control" id="purchasePrice" placeholder="18.50" required>
                   </div>
                   <div class="form-group col-md-6">
                     <label for="purchaseQuantity">Quantity</label>
@@ -47,8 +47,7 @@
                     <input type="date" class="form-control" id="purchaseDate" required>
                   </div>
                 </div>
-                <button id="cryptoPurchaseBtn" class="btn btn-block text-white cryptoBtns"
-                  type="submit">Purchase</button>
+                <button id="purchaseBtn" class="btn btn-block text-white cryptoBtns" type="submit">Purchase</button>
               </form>
             </div>
           </div>
@@ -72,7 +71,7 @@
                 <div class="form-row">
                   <div class="form-group col-md-6">
                     <label for="sellPrice">Price</label>
-                    <input type="number" class="form-control" id="sellPrice" placeholder="$8.00" required>
+                    <input type="number" class="form-control" id="sellPrice" placeholder="18.50" required>
                   </div>
                   <div class="form-group col-md-6">
                     <label for="sellQuantity">Quantity</label>
@@ -81,15 +80,15 @@
                 </div>
                 <div class="form-row">
                   <div class="form-group col-md-6">
-                    <label for="sellID">Crypto ID#</label>
-                    <input type="number" class="form-control" id="sellID" placeholder="1" required>
-                  </div>
-                  <div class="form-group col-md-6">
                     <label for="sellDate">Date</label>
                     <input type="date" class="form-control" id="sellDate" required>
                   </div>
+                  <div class="form-group col-md-6">
+                    <label for="sellID">Crypto ID#</label>
+                    <input type="number" class="form-control" id="sellID" placeholder="1" required>
+                  </div>
                 </div>
-                <button id="cryptoSellBtn" class="btn btn-block text-white cryptoBtns" type="submit">Sell</button>
+                <button id="sellBtn" class="btn btn-block text-white cryptoBtns" type="submit">Sell</button>
               </form>
             </div>
           </div>

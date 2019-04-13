@@ -1,10 +1,17 @@
-const cryptoTransactionType = $('#cryptoTransactionType');
-const cryptoDate = $('#cryptoDate');
-const cryptoName = $('#cryptoName');
-const cryptoSymbol = $('#cryptoSymbol');
-const cryptoPrice = $('#cryptoPrice');
-const cryptoQuantity = $('#cryptoQuantity');
-const cryptoSubmitBtn = $('#cryptoSubmitBtn');
+const purchaseName = $('#purchaseName');
+const purchaseSymbol = $('#purchaseSymbol');
+const purchasePrice = $('#purchasePrice');
+const purchaseQuantity = $('#purchaseQuantity');
+const purchaseDate = $('#purchaseDate');
+const purchaseBtn = $('#purchaseBtn');
+
+const sellName = $('#sellName');
+const sellSymbol = $('#sellSymbol');
+const sellPrice = $('#sellPrice');
+const sellQuantity = $('#sellQuantity');
+const sellID = $('#sellID');
+const sellDate = $('#sellDate');
+const sellBtn = $('#sellBtn');
 
 const API = {
   save(crypto) {
@@ -16,7 +23,6 @@ const API = {
       url: 'api/crypto',
       data: JSON.stringify(crypto),
     });
-    // TODO: RELOAD PAGE
   },
   get() {
     return $.ajax({
@@ -32,26 +38,36 @@ const API = {
   },
 };
 
-const submitCrypto = () => {
-  const cryptoTransaction = cryptoTransactionType[0].value;
-  const cryptoData = {
-    transaction_date: cryptoDate[0].value,
-    transaction_type: cryptoTransactionType.val().trim(),
-    coin_name: cryptoName.val().trim(),
-    coin_symbol: cryptoSymbol.val().trim(),
-    coin_price: parseInt(cryptoPrice.val().trim()),
-    coin_quantity: parseInt(cryptoQuantity.val().trim()),
+const purchaseCrypto = () => {
+  const purchaseData = {
+    date: purchaseDate[0].value,
+    transaction: 'purchase',
+    category: 'Crypto',
+    name: purchaseName.val().trim(),
+    symbol: purchaseSymbol.val().trim(),
+    price: parseInt(purchasePrice.val().trim()),
+    quantity: parseInt(purchaseQuantity.val().trim()),
   };
 
-  switch (cryptoTransaction) {
-    case 'purchase':
-      API.save(cryptoData);
-      break;
-    case 'sale':
-      break;
-    default:
-      break;
-  }
+  API.save(purchaseData);
+  window.location.reload();
 };
 
-cryptoSubmitBtn.on('click', submitCrypto);
+const sellCrypto = () => {
+  const sellData = {
+    id: parseInt(sellID.val().trim()),
+    date: sellDate[0].value,
+    transaction: 'sell',
+    category: 'Crypto',
+    name: sellName.val().trim(),
+    symbol: sellSymbol.val().trim(),
+    price: parseInt(sellPrice.val().trim()),
+    quantity: parseInt(sellQuantity.val().trim()),
+  };
+
+  API.delete(sellData.id);
+  window.location.reload();
+};
+
+purchaseBtn.on('click', purchaseCrypto);
+sellBtn.on('click', sellCrypto);

@@ -1,12 +1,21 @@
-const realEstateTransactionType = $('#realEstateTransactionType');
-const realEstateDate = $('#realEstateDate');
-const realEstateAddress1 = $('#realEstateAddress1');
-const realEstateAddress2 = $('#realEstateAddress2');
-const realEstateCity = $('#realEstateCity');
-const realEstateState = $('#realEstateState');
-const realEstateZip = $('#realEstateZip');
-const realEstatePrice = $('#realEstatePrice');
-const realEstateSubmitBtn = $('#realEstateSubmitBtn');
+const purchaseAddress1 = $('#purchaseAddress1');
+const purchaseAddress2 = $('#purchaseAddress2');
+const purchaseCity = $('#purchaseCity');
+const purchaseState = $('#purchaseState');
+const purchaseZip = $('#purchaseZip');
+const purchasePrice = $('#purchasePrice');
+const purchaseDate = $('#purchaseDate');
+const purchaseBtn = $('#purchaseBtn');
+
+const sellAddress1 = $('#sellAddress1');
+const sellAddress2 = $('#sellAddress2');
+const sellCity = $('#sellCity');
+const sellState = $('#sellState');
+const sellZip = $('#sellZip');
+const sellPrice = $('#sellPrice');
+const sellID = $('#sellID');
+const sellDate = $('#sellDate');
+const sellBtn = $('#sellBtn');
 
 const API = {
   save(realEstate) {
@@ -33,29 +42,36 @@ const API = {
   },
 };
 
-const submitRealEstate = () => {
-  const realEstateTransaction = realEstateTransactionType[0].value;
-  const realEstateData = {
-    transaction_date: realEstateDate[0].value,
-    prop_address1: realEstateAddress1.val().trim(),
-    prop_address2: realEstateAddress2.val().trim(),
-    prop_city: realEstateCity.val().trim(),
-    prop_state: realEstateState.val().trim(),
-    prop_zip: parseInt(realEstateZip.val().trim()),
-    prop_price: parseInt(realEstatePrice.val().trim()),
+const purchaseRealEstate = () => {
+  const purchaseData = {
+    date: purchaseDate[0].value,
+    address1: purchaseAddress1.val().trim(),
+    address2: purchaseAddress2.val().trim(),
+    city: purchaseCity.val().trim(),
+    state: purchaseState.val().trim(),
+    zip: parseInt(purchaseZip.val().trim()),
+    price: parseInt(purchasePrice.val().trim()),
   };
 
-  console.log(realEstateData);
-
-  switch (realEstateTransaction) {
-    case 'purchase':
-      API.save(realEstateData);
-      break;
-    case 'sale':
-      break;
-    default:
-      break;
-  }
+  API.save(purchaseData);
+  window.location.reload();
 };
 
-realEstateSubmitBtn.on('click', submitRealEstate);
+const sellRealEstate = () => {
+  const sellData = {
+    id: parseInt(sellID.val().trim()),
+    date: sellDate[0].value,
+    address1: sellAddress1.val().trim(),
+    address2: sellAddress2.val().trim(),
+    city: sellCity.val().trim(),
+    state: sellState.val().trim(),
+    zip: parseInt(sellZip.val().trim()),
+    price: parseInt(sellPrice.val().trim()),
+  };
+
+  API.delete(sellData.id);
+  window.location.reload();
+};
+
+purchaseBtn.on('click', purchaseRealEstate);
+sellBtn.on('click', sellRealEstate);
