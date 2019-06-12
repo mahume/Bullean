@@ -3,7 +3,7 @@
 ## About
 Full-stack app that consolidates your investment portfolio into sleek and intuitive interface.
 
-See the app in action over at [Heroku](https://bullean-portfolio.herokuapp.com/).
+See the app in action over at [Heroku](https://bullean-app.herokuapp.com/).
 
 ## Features
 
